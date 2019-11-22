@@ -4,127 +4,178 @@ class Node:
         self.next = None
 
 
-class linked_list():
+class linked_list:
     def __init__(self):
         self.head = None
 
-    def insert(self, newNode):
+    def insert(self, new_node):
         if self.head is None:
-            self.head = newNode
+            self.head = new_node
         else:
-            lastNode = self.head
+            last_node = self.head
             while True:
-                if lastNode.next is None:
+                if last_node.next is None:
                     break
-                lastNode = lastNode.next
-            lastNode.next = newNode
+                last_node = last_node.next
+            last_node.next = new_node
 
-    def add_first(self, newNode):
+    def add_first(self, new_node):
         if self.head is None:
-            self.head = newNode
+            self.head = new_node
         else:
-            tempNode = self.head
-            self.head = newNode
-            self.head.next = tempNode
-            del tempNode
+            temp_node = self.head
+            self.head = new_node
+            self.head.next = temp_node
+            del temp_node
 
-    def add_position(self, newNode, pos):
-        currentNode = self.head
-        currentPosition = 0
+    def add_position(self, new_node, pos):
+        current_node = self.head
+        current_position = 0
         while True:
-            if currentPosition == pos:
-                newNode.next = currentNode
-                previousNode.next = newNode
+            if current_position == pos:
+                new_node.next = current_node
+                prev_node.next = new_node
                 break
-            previousNode = currentNode
-            currentNode = currentNode.next
-            currentPosition += 1
+            prev_node = current_node
+            current_node = current_node.next
+            current_position += 1
 
     def print_list(self):
         if self.head is None:
             print("List is Empty: ")
             return
-        currentNode = self.head
+        current_node = self.head
         while True:
-            if currentNode is None:
+            if current_node is None:
                 break
-            print(currentNode.data)
-            currentNode = currentNode.next
+            print(current_node.data)
+            current_node = current_node.next
 
     def delete_end(self):
-        lastNode = self.head
-        while lastNode.next is not None:
-            previousNode = lastNode
-            lastNode = lastNode.next
-        previousNode.next = None
+        last_node = self.head
+        while last_node.next is not None:
+            prev_node = last_node
+            last_node = last_node.next
+        prev_node.next = None
 
     def size(self):
         count = 0
-        currentNode = self.head
-        while currentNode is not None:
-            currentNode = currentNode.next
+        current_node = self.head
+        while current_node is not None:
+            current_node = current_node.next
             count += 1
         print("Size of a list is:", count)
 
-    def isempty(self):
+    def is_empty(self):
         if self.head is None:
             print("List is Empty:")
         else:
             print("List is not Empty: ")
 
-    def search_item(self, newNode):
-        traverseNode = self.head
-        while traverseNode is not None:
-            if traverseNode.data is newNode.data:
-                x = 1
+    def search(self, new_node):
+        traverse_node = self.head
+        while traverse_node is not None:
+            if traverse_node.data == new_node.data:
+                return 1
+        traverse_node = traverse_node.next
+        return 0
+
+    def search_item(self, new_node):
+        traverse_node = self.head
+        while traverse_node is not None:
+            value = 0
+            if traverse_node.data == new_node.data:
+                value = 1
                 break
             else:
-                traverseNode = traverseNode.next
-        if x is 1:
-            print("Data is Found")
+                traverse_node = traverse_node.next
+        if value is 1:
+            print("Data Found")
+            return 1
         else:
             print("Data is not Found")
+            return 0
+
+    def delete_position(self, new_node):
+        traverse_node = self.head
+        prev_node = self.head
+        if traverse_node.data == new_node.data:
+            self.head = traverse_node.next
+        else:
+            while traverse_node.data != new_node.data:
+                prev_node = traverse_node
+                traverse_node = traverse_node.next
+            prev_node.next = traverse_node.next
+
+    def insert_ascending(self, new_node):
+        # global
+        prev_node = self.head
+        traverse_node = self.head
+        while traverse_node.data < new_node.data:
+            prev_node = traverse_node
+            traverse_node = traverse_node.next
+        prev_node.next = new_node
+        new_node.next = traverse_node
+
+    def sort_ing(self, array1):
+        length = len(array1)
+        for outer_loop in range(length):
+            for inner_loop in range(0, length - outer_loop - 1):
+                if array1[inner_loop] > array1[inner_loop + 1]:
+                    array1[inner_loop], array1[inner_loop + 1] = array1[inner_loop + 1], array1[inner_loop]
 
 
-l1 = linked_list()
-print("1.Add node\n2.Add First\n3.Add node at position\n4.Delete node\n5.,\n "
-      "6.Search node in list\n7.Find size of list\n8.Display list")
-choice = int(input("Enter your choice: "))
-while choice is not False:
-    while choice is not 0:
-        if choice == 1:
-            var1 = Node(input("Enter a data to store: "))
-            l1.insert(var1)
-            break
-        elif choice == 2:
-            var1 = Node(input("Enter a data to store: "))
-            l1.add_first(var1)
-            break
-        elif choice == 3:
-            var1 = Node(input("Enter a data to store: "))
-            l1.add_position(var1)
-            break
-        elif choice == 4:
-            l1.delete_end()
-            break
-        elif choice == 5:
-            break
-        elif choice == 6:
-            var1 = Node(input("Enter a data to search: "))
-            l1.search_item(var1)
-            break
-        elif choice == 7:
-            l1.size()
-            break
-        elif choice == 8:
-            l1.print_list()
-            break
-    choice = input("Enter a choice: ")
+class Stack:
+
+    def __init__(self):
+        self.elements = []
+
+    def push(self, element):
+        self.elements.append(element)
+
+    def pop(self):
+        return self.elements.pop()
+
+    def is_empty(self):
+        return self.elements == []
+
+    def peek(self):
+        if not self.is_empty():
+            return self.elements[-1]
+
+    def size(self):
+        return len(self.elements)
 
 
+class Queue:
+    def __init__(self):
+        self.elements = []
 
+    def is_empty(self):
+        return self.elements == []
 
+    def enqueue(self, element):
+        self.elements.insert(0, element)
 
+    def de_queue(self):
+        return self.elements.pop()
 
+    def size(self):
+        return len(self.elements)
+
+    def withdraw(self, balance):
+        amount = int(input("Enter the Amount to withdraw:-"))
+        if balance == 0:
+            print("Insufficient balance in account")
+        else:
+            balance = balance - amount
+            self.de_queue()
+        return balance
+
+    def deposit(self, balance):
+        amount = int(input("Enter the amount to be Deposited:-"))
+        balance = balance + amount
+        self.de_queue()
+        return balance
 
 
