@@ -2,6 +2,7 @@
   <dictionary name="admin-1">
     <words>
       <w>datastructure</w>
+      <w>dequeue</w>
     </words>
   </dictionary>
 </component>
