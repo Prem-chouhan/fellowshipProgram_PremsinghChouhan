@@ -5,8 +5,57 @@ class Node:
 
 
 class linked_list:
+
     def __init__(self):
         self.head = None
+
+    # This function is in LinkedList class
+    # Function to insert a new node at the beginning
+    def push(self, new_data):
+        new_node = Node(new_data)
+
+        # 3. Make next of new Node as head
+        new_node.next = self.head
+
+        # 4. Move the head to point to new Node
+        self.head = new_node
+
+    def search(self, x):
+        current = self.head
+        while current is not None:
+            if current.data is x:
+                return 1
+            current = current.next
+        return 0
+
+    def search_item(self, new_node):
+        traverse_node = self.head
+        while traverse_node is not None:
+            value = 0
+            if traverse_node.data == new_node.data:
+                value = 1
+                break
+            else:
+                traverse_node = traverse_node.next
+        if value is 1:
+            print("Data Found  \nAfter Deletion:")
+            return 1
+        else:
+            print("Data is NOT in the file")
+            return 0
+
+    def display(self):
+        # Node current will point to head
+        current = self.head;
+
+        if self.head is None:
+            print("Slot is empty")
+            return
+        print("Nodes for slot is:", end="=> ")
+        while current is not None:
+            # Prints each node by incrementing pointer
+            print(current.data)
+            current = current.next
 
     def insert(self, new_node):
         if self.head is None:
@@ -46,6 +95,7 @@ class linked_list:
             return
         current_node = self.head
         while True:
+            # print("After Deleting the Element")
             if current_node is None:
                 break
             print(current_node.data)
@@ -72,29 +122,41 @@ class linked_list:
         else:
             print("List is not Empty: ")
 
-    def search(self, new_node):
-        traverse_node = self.head
-        while traverse_node is not None:
-            if traverse_node.data == new_node.data:
-                return 1
-        traverse_node = traverse_node.next
-        return 0
+    def deleteNode(self, key):
 
-    def search_item(self, new_node):
-        traverse_node = self.head
-        while traverse_node is not None:
-            value = 0
-            if traverse_node.data == new_node.data:
-                value = 1
+        # Store head node
+        temp = self.head
+
+        # If head node itself holds the key to be deleted
+        if temp is not None:
+            if temp.data is key:
+                self.head = temp.next
+                temp = None
+                return
+
+        # Search for the key to be deleted, keep track of the
+        # previous node as we need to change 'prev.next'
+        while temp is not None:
+            if temp.data == key:
                 break
-            else:
-                traverse_node = traverse_node.next
-        if value is 1:
-            print("Data Found")
-            return 1
-        else:
-            print("Data is not Found")
-            return 0
+            prev = temp
+            temp = temp.next
+
+            # if key was not present in linked list
+        if temp is None:
+            return
+
+            # Unlink the node from linked list
+        prev.next = temp.next
+
+        temp = None
+        # def search(self, new_node):
+    #     traverse_node = self.head
+    #     while traverse_node is not None:
+    #         if traverse_node.data is new_node.data:
+    #             return 1
+    #     traverse_node = traverse_node.next
+    #     return 0
 
     def delete_position(self, new_node):
         traverse_node = self.head
@@ -175,7 +237,7 @@ class Queue:
     def deposit(self, balance):
         amount = int(input("Enter the amount to be Deposited:-"))
         balance = balance + amount
-        self.de_queue()
+        self.enqueue(amount)
         return balance
 
 
@@ -197,13 +259,6 @@ class Dequeue:
         self.head = new_node
         self.head.next = temp_node
         del temp_node
-
-    # def add_rear(self, data):
-    #     new_node = Node(data)
-    #     cur_node = self.head
-    #     while cur_node.next is not None:
-    #         cur =cur_node.next
-    #     cur.next = new_node
 
     def add_rear(self, new_node):
         if self.head is None:
@@ -242,13 +297,6 @@ class Dequeue:
         else:
             return None
 
-    #     last_node = self.head
-    #     prev_node = None
-    #     while last_node.next is None:
-    #         prev_node = last_node
-    #         last_node = last_node.next
-    #     prev_node.next = None
-
     def remove_front(self):
         if self.head is not None:
             prev_node = self.head
@@ -271,29 +319,38 @@ class Dequeue:
             current_node = current_node.next
 
 
-def prime():
+def prime(number):
     lst = []
-    for num in range(1, 100 + 1):
+    # number = int(input("Enter the number:-"))
+    for num in range(1, number + 1):
         if num > 1:
-            for i in range(2, num):
-                if (num % i) == 0:
+            for loop in range(2, num):
+                if (num % loop) == 0:
                     break
             else:
                 lst.append(num)
     return lst
 
 
-def is_anagram(p, q):
-    while leng_th(p) == leng_th(q):
-        # Testing sorted values equality
-        if sorted(p) == sorted(q):
-            return p, q
-        return False
+def anagram(a):
+    anagram_list = []
+    for outer_loop in a:
+        for inner_loop in a:
+            if outer_loop != inner_loop and (sorted(str(outer_loop)) == sorted(str(inner_loop))):
+                anagram_list.append(outer_loop)
+                break
+    return anagram_list
 
 
-def leng_th(n):
-    count = 0
-    while n != 0:
-        n /= 10
-        count += 1
-    return count
+def prime1(start, end):
+    lst = []
+    # number = int(input("Enter the number:-"))
+    for num in range(start, end + 1):
+        if num > 1:
+            for loop in range(2, num):
+                if (num % loop) == 0:
+                    break
+            else:
+                lst.append(num)
+
+    return lst

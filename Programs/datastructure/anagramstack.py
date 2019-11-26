@@ -1,34 +1,37 @@
-from datastructure.Utility import prime, is_anagram, leng_th
+from datastructure.Utility import Stack, prime, anagram
 
 
-# def prime():
-#     lst = []
-#     for num in range(1, 1000 + 1):
-#         if num > 1:
-#             for i in range(2, num):
-#                 if (num % i) == 0:
-#                     break
-#             else:
-#                 lst.append(num)
-#     return lst
-#
-#
-# def anagram(a):
-#     # initialize a list
-#     anagram_list = []
-#     for i in a:
-#         for j in a:
-#             if i != j and (sorted(str(i)) == sorted(str(j))):
-#                 anagram_list.append(i)
-#     return anagram_list
-#
-#
-# a = prime()
-# t100 = a[0:1000]
-#
-# print(anagram(t100))
+def ang(number):
+    lst = []
+    my_stack = Stack()
+    prime_num = prime(number)
+    lst = anagram(prime_num)
 
-number = 12345
+    for loop in range(0, len(lst)):
+        my_stack.push(lst[loop])
 
-p = leng_th(number)
-print(p)
+    for loop in range(0, len(lst)):
+        hold = my_stack.pop()
+        lst.append(hold)
+
+    return lst
+
+
+def main():
+    try:
+        value = True
+        while value:
+            number = int(input("Enter the number:-"))
+            if number > 1000:
+                print("Enter a number Smaller than 1000")
+                value = True
+            else:
+                value = False
+                result = ang(number)
+                print("anagram list ", result)
+    except ValueError:
+        print("Sorry..!Invalid Input")
+
+
+if __name__ == '__main__':
+    main()

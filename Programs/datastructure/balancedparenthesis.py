@@ -1,26 +1,33 @@
 from datastructure.Utility import Stack
 
 
-def bal_paren():
-    str = input("Enter the Arithmetic Expression:-")
-    arr = []
+def bal_paren(arith_exp):
     my_stack = Stack()
     open_paren = 0
     close_paren = 0
+    # tup = ("(", ")")
 
-    for loop in range(len(str)):
-        my_stack.push(str[loop])
-        if str[loop] == "(":
+    for loop in range(len(arith_exp)):
+        my_stack.push(arith_exp[loop])
+
+        if arith_exp[loop] == "(":
             open_paren += 1
 
-        if str[loop] == ")":
+        if arith_exp[loop] == ")":
             close_paren += 1
             top = my_stack.pop()
+    return open_paren, close_paren
 
-    if open_paren == close_paren:
+
+def main():
+    arith_exp = input("Enter the Arithmetic Expression:-")
+    open_hold, clo_hold = bal_paren(arith_exp)
+
+    if open_hold == clo_hold:
         print("Expression is Balanced ")
     else:
         print("Expression is  NOT Balanced ")
 
 
-bal_paren()
+if __name__ == '__main__':
+    main()
