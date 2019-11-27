@@ -1,17 +1,13 @@
-
-def factorial(n):
-    res = 1
-    for i in range(1, n + 1):
-        res *= i
-    return res
-
-def factorial(n):
-    res = 1
-    for i in range(1, n + 1):
-        res *= i
-    return res
+from datastructure.Utility import countBST
 
 
-# ram = factorial(3)
-#
-# print(ram)
+def main():
+    number = int(input("Enter the number:-"))
+
+    tree_ways = countBST(number)
+
+    print("Count of BST with", number, "nodes is", tree_ways)
+
+
+if __name__ == '__main__':
+    main()

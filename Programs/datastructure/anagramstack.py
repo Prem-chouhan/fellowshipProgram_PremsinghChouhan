@@ -12,25 +12,32 @@ def ang(number):
 
     for loop in range(0, len(lst)):
         hold = my_stack.pop()
+        print(hold)
         lst.append(hold)
 
     return lst
 
 
 def main():
-    try:
-        value = True
-        while value:
-            number = int(input("Enter the number:-"))
-            if number > 1000:
-                print("Enter a number Smaller than 1000")
-                value = True
-            else:
-                value = False
-                result = ang(number)
-                print("anagram list ", result)
-    except ValueError:
-        print("Sorry..!Invalid Input")
+    flag = True
+    while flag:
+
+        try:
+            value = True
+
+            while value:
+                number = int(input("Enter the number:-"))
+
+                if number > 1000:
+                    print("Enter a number Smaller than 1000")
+                    value = True
+                else:
+                    value = False
+                    result = ang(number)
+                    print("anagram list ", result)
+
+        except ValueError:
+            print("Sorry..!Invalid Input")
 
 
 if __name__ == '__main__':

@@ -20,13 +20,14 @@ def bal_paren(arith_exp):
 
 
 def main():
-    arith_exp = input("Enter the Arithmetic Expression:-")
-    open_hold, clo_hold = bal_paren(arith_exp)
+    while True:
+        arith_exp = input("Enter the Arithmetic Expression:-")
+        open_hold, clo_hold = bal_paren(arith_exp)
 
-    if open_hold == clo_hold:
-        print("Expression is Balanced ")
-    else:
-        print("Expression is  NOT Balanced ")
+        if open_hold == clo_hold:
+            print("Expression is Balanced ")
+        else:
+            print("Expression is  NOT Balanced ")
 
 
 if __name__ == '__main__':

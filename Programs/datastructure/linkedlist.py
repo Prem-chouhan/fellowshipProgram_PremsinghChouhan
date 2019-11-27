@@ -8,10 +8,12 @@ def main():
     # lst = []
     lst = text.split(" ")
     print(lst)
+    print("Strings in list are:-")
     for loop in range(len(lst)):
-        str = lst[loop]
-        hold = Node(str)
+        elements = lst[loop]
+        hold = Node(elements)
         my_list.insert(hold)
+    my_list.print_list()
     while True:
         search = input("Enter a string to search: ")
         holder = Node(search)
