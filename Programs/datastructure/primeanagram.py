@@ -6,7 +6,9 @@ def main():
         try:
             start = int(input("Enter start of the number:- "))
             end = int(input("Enter End of the number:- "))
-
+            if start > 1000:
+                print("Sorry..!! Number should be less than 1000")
+                break
             # for i in range(0, 10):
             prime = prime1(start, end)
             ana = anagram(prime)

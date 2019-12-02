@@ -1,0 +1,71 @@
+{
+    "Pulses": [
+        {
+            "name": "Groundnuts",
+            "price": 200,
+            "weight": "10kgs"
+        },
+        {
+            "name": "Peanuts",
+            "price": 100,
+            "weight": "10kgs"
+        },
+        {
+            "name": "Green peas",
+            "price": 150,
+            "weight": "10kgs"
+        },
+        {
+            "name": "pqr",
+            "price": 1000,
+            "weight": "10kgs"
+        }
+    ],
+    "Rice": [
+        {
+            "name": "Sharbati",
+            "price": 1000,
+            "weight": "10kgs"
+        },
+        {
+            "name": "Basmati",
+            "price": 1500,
+            "weight": "10kgs"
+        },
+        {
+            "name": "Ankur",
+            "price": 500,
+            "weight": "10kgs"
+        },
+        {
+            "name": "pqr",
+            "price": 1000,
+            "weight": "10kgs"
+        }
+    ],
+    "Wheat": [
+        {
+            "name": "rahet",
+            "price": 100,
+            "weight": "10kgs"
+        },
+        {
+            "name": "karet",
+            "price": 200,
+            "weight": "10kgs"
+        },
+        {
+            "name": "Shahet",
+            "price": 300,
+            "weight": "10kgs"
+        },
+        {
+            "name": "pqr",
+            "price": 1000,
+            "weight": "10kgs"
+        },
+        {
+            "Total Amount for Inventory": 7050
+        }
+    ]
+}
