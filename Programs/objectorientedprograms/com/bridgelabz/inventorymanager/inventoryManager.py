@@ -77,7 +77,7 @@ with open('distros.json') as readfile:
     for outer_loop in range(len(lst)):
         for inner_loop in data[lst[outer_loop]]:
             # print(inner_loop['price'])
-            total = total + inner_loop['price']
+            print(total + inner_loop['price'])
             # print(total)
 print("Total Amount spent is :-", total)
 

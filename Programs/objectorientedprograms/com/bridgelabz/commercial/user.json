@@ -1,8 +1,19 @@
 {
     "user details": [
         {
-            "customer balance": 1000,
-            "customer name": "prem"
+            "customer balance": 10000,
+            "customer name": "prem",
+            "number of share": 0
+        },
+        {
+            "customer balance": 20000,
+            "customer name": "akash",
+            "number of share": 0
+        },
+        {
+            "customer balance": 24400,
+            "customer name": "prem",
+            "number of share": 0
         }
     ]
 }

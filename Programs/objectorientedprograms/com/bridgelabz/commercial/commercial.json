@@ -1,9 +1,19 @@
 {
     "commercial data": [
         {
-            "company name": "TCS",
+            "company name": "tcs",
             "company shares": 150,
             "share per price": 100
+        },
+        {
+            "company name": "amazon",
+            "company shares": 144,
+            "share per price": 100
+        },
+        {
+            "company name": "mphasis",
+            "company shares": 100,
+            "share per price": 50
         }
     ]
 }
