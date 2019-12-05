@@ -157,7 +157,11 @@ class linked_list:  # creating a linkedlist class
     # This Function is in Linked list class
     # Function to delete  a node
     def delete_node(self, key):
+        """
 
+            :param
+            :return void
+        """
         # Store head node
         temp = self.head
 

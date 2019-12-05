@@ -2,14 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3485e27d-80c0-4995-9e64-fe5d0465fdf5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/designpatterns/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/designpatterns/demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/addressbook/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/addressbook/addressbool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/demo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datastructure/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/datastructure/Utility.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datastructure/dequeue.py" beforeDir="false" afterPath="$PROJECT_DIR$/datastructure/dequeue.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/StockAccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/StockAccount.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/commercial.json" beforeDir="false" afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/commercial.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/user.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/inventorymanager/distros.json" beforeDir="false" afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/inventorymanager/distros.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/inventorymanager/inventoryManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/inventorymanager/inventoryManager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/stockmarket/stock.json" beforeDir="false" afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/stockmarket/stock.json" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,9 +32,14 @@
   </component>
   <component name="ProjectId" id="1TuovvXZ1mLDgB0hgyKQiBcFJg2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/ObjectOriented" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/MLProjects-master (1)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -51,19 +61,7 @@
       <recent name="$PROJECT_DIR$/objectorientedprograms" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Python.StockAccount (1)">
+  <component name="RunManager" selected="Python.demo (1)">
     <configuration name="StockAccount (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,6 +75,48 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/StockAccount.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="demo (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Programs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/designpatterns" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/designpatterns/demo.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Programs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -106,7 +146,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="inventoryManager" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="linkedlist" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -114,32 +154,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/inventorymanager" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datastructure" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/inventorymanager/inventoryManager.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="inventorymanager" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Programs" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ObjectOriented/inventorymanager" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ObjectOriented/inventorymanager/inventorymanager.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datastructure/linkedlist.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -190,27 +209,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="stockmarket (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Programs" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ObjectOriented/stockmanagement" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ObjectOriented/stockmanagement/stockmarket.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="stockmarket (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -236,21 +234,33 @@
       <item itemvalue="Python.dequeue" />
       <item itemvalue="Python.orderedlist" />
       <item itemvalue="Python.queue" />
-      <item itemvalue="Python.inventorymanager" />
-      <item itemvalue="Python.stockmarket (1)" />
       <item itemvalue="Python.stockmarket (2)" />
       <item itemvalue="Python.StockAccount (1)" />
-      <item itemvalue="Python.inventoryManager" />
+      <item itemvalue="Python.demo" />
+      <item itemvalue="Python.linkedlist" />
+      <item itemvalue="Python.demo (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.demo (1)" />
         <item itemvalue="Python.StockAccount (1)" />
-        <item itemvalue="Python.inventoryManager" />
+        <item itemvalue="Python.linkedlist" />
         <item itemvalue="Python.stockmarket (2)" />
-        <item itemvalue="Python.stockmarket (1)" />
-        <item itemvalue="Python.inventorymanager" />
+        <item itemvalue="Python.demo" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -277,6 +287,56 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575524044397">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.997@67.27.1213.997" timestamp="1575524044397" />
+    <state width="1190" height="321" key="GridCell.Tab.0.bottom" timestamp="1575545605978">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state width="1190" height="321" key="GridCell.Tab.0.bottom/67.27.1213.997@67.27.1213.997" timestamp="1575545605978" />
+    <state width="1190" height="321" key="GridCell.Tab.0.center" timestamp="1575545605978">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state width="1190" height="321" key="GridCell.Tab.0.center/67.27.1213.997@67.27.1213.997" timestamp="1575545605978" />
+    <state width="1190" height="321" key="GridCell.Tab.0.left" timestamp="1575545605978">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state width="1190" height="321" key="GridCell.Tab.0.left/67.27.1213.997@67.27.1213.997" timestamp="1575545605978" />
+    <state width="1190" height="321" key="GridCell.Tab.0.right" timestamp="1575545605978">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state width="1190" height="321" key="GridCell.Tab.0.right/67.27.1213.997@67.27.1213.997" timestamp="1575545605978" />
+    <state width="1190" height="321" key="GridCell.Tab.1.bottom" timestamp="1575545605979">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state width="1190" height="321" key="GridCell.Tab.1.bottom/67.27.1213.997@67.27.1213.997" timestamp="1575545605979" />
+    <state width="1190" height="321" key="GridCell.Tab.1.center" timestamp="1575545605978">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state width="1190" height="321" key="GridCell.Tab.1.center/67.27.1213.997@67.27.1213.997" timestamp="1575545605978" />
+    <state width="1190" height="321" key="GridCell.Tab.1.left" timestamp="1575545605978">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state width="1190" height="321" key="GridCell.Tab.1.left/67.27.1213.997@67.27.1213.997" timestamp="1575545605978" />
+    <state width="1190" height="321" key="GridCell.Tab.1.right" timestamp="1575545605978">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state width="1190" height="321" key="GridCell.Tab.1.right/67.27.1213.997@67.27.1213.997" timestamp="1575545605978" />
+    <state width="606" height="499" key="XDebugger.FullValuePopup" timestamp="1575433038774">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state width="606" height="499" key="XDebugger.FullValuePopup/67.27.1213.997@67.27.1213.997" timestamp="1575433038774" />
+    <state x="329" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1575520543492">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state x="329" y="352" key="com.intellij.ide.util.TipDialog/67.27.1213.997@67.27.1213.997" timestamp="1575520543492" />
+    <state x="179" y="185" width="998" height="712" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1575459579482">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state x="179" y="185" width="998" height="712" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1213.997@67.27.1213.997" timestamp="1575459579482" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

@@ -149,6 +149,12 @@
             "share number": 10,
             "share price": 12,
             "total price": 120
+        },
+        {
+            "share name": "amazon",
+            "share number": 19,
+            "share price": 100,
+            "total price": 1900
         }
     ]
 }
