@@ -2,18 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3485e27d-80c0-4995-9e64-fe5d0465fdf5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/designpatterns/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designpatterns/demo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/addressbook/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/addressbook/addressbool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FunDooapp/configration/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FunDooapp/configration/db_connection.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FunDooapp/model/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FunDooapp/model/query.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FunDooapp/server/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FunDooapp/server/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FunDooapp/templates/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FunDooapp/templates/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FunDooapp/view/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FunDooapp/view/register.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FunDooapp/view/route.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Validation/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Validation/user.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/designpatterns/adapter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/designpatterns/addresspattren.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/addressbook/addressbook.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/cliniquemanagement/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/patterntest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testcases/user/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datastructure/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/datastructure/Utility.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/datastructure/dequeue.py" beforeDir="false" afterPath="$PROJECT_DIR$/datastructure/dequeue.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datastructure/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/designpatterns/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/designpatterns/demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/addressbook/addressbool.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/StockAccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/StockAccount.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/commercial.json" beforeDir="false" afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/commercial.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/user.json" beforeDir="false" afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/user.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/inventorymanager/distros.json" beforeDir="false" afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/inventorymanager/distros.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/inventorymanager/inventoryManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/inventorymanager/inventoryManager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/stockmarket/stock.json" beforeDir="false" afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/stockmarket/stock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/stockmarket/stockmaretutility.py" beforeDir="false" afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/stockmarket/stockmaretutility.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +46,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/objectorientedprograms" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1TuovvXZ1mLDgB0hgyKQiBcFJg2" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -39,7 +64,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/MLProjects-master (1)" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FunDooapp" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -55,14 +81,17 @@
     <option name="mySupportGeventDebugging" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/testcases" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz" />
       <recent name="$PROJECT_DIR$/objectorientedprograms/com" />
       <recent name="$PROJECT_DIR$/objectorientedprograms" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.demo (1)">
-    <configuration name="StockAccount (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.StockAccount">
+    <configuration name="StockAccount" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -83,7 +112,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="demo (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="addresspattren" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -95,7 +124,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/designpatterns/demo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/designpatterns/addresspattren.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="demo (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Programs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sql" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sql/demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -112,11 +162,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/designpatterns" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/demo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/designpatterns/demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -146,27 +196,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="linkedlist" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Programs" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/datastructure" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datastructure/linkedlist.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="orderedlist" type="PythonConfigurationType" factoryName="Python">
       <module name="Programs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -180,6 +209,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/datastructure/orderedlist.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="practice" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Programs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/sql" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/sql/practice.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -209,43 +259,22 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="stockmarket (2)" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Programs" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/stockmarket" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/stockmarket/stockmarket.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.dequeue" />
       <item itemvalue="Python.orderedlist" />
       <item itemvalue="Python.queue" />
-      <item itemvalue="Python.stockmarket (2)" />
-      <item itemvalue="Python.StockAccount (1)" />
       <item itemvalue="Python.demo" />
-      <item itemvalue="Python.linkedlist" />
+      <item itemvalue="Python.addresspattren" />
       <item itemvalue="Python.demo (1)" />
+      <item itemvalue="Python.practice" />
+      <item itemvalue="Python.StockAccount" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.StockAccount" />
         <item itemvalue="Python.demo (1)" />
-        <item itemvalue="Python.StockAccount (1)" />
-        <item itemvalue="Python.linkedlist" />
-        <item itemvalue="Python.stockmarket (2)" />
+        <item itemvalue="Python.practice" />
+        <item itemvalue="Python.addresspattren" />
         <item itemvalue="Python.demo" />
       </list>
     </recent_temporary>
@@ -289,54 +318,66 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575524044397">
+    <state x="368" y="329" width="569" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1575875621305">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.997@67.27.1213.997" timestamp="1575524044397" />
-    <state width="1190" height="321" key="GridCell.Tab.0.bottom" timestamp="1575545605978">
+    <state x="368" y="329" width="569" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1213.997@67.27.1213.997" timestamp="1575875621305" />
+    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576294133276">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state width="1190" height="321" key="GridCell.Tab.0.bottom/67.27.1213.997@67.27.1213.997" timestamp="1575545605978" />
-    <state width="1190" height="321" key="GridCell.Tab.0.center" timestamp="1575545605978">
+    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.997@67.27.1213.997" timestamp="1576294133276" />
+    <state width="1190" height="199" key="GridCell.Tab.0.bottom" timestamp="1576333281795">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state width="1190" height="321" key="GridCell.Tab.0.center/67.27.1213.997@67.27.1213.997" timestamp="1575545605978" />
-    <state width="1190" height="321" key="GridCell.Tab.0.left" timestamp="1575545605978">
+    <state width="1190" height="199" key="GridCell.Tab.0.bottom/67.27.1213.997@67.27.1213.997" timestamp="1576333281795" />
+    <state width="1190" height="199" key="GridCell.Tab.0.center" timestamp="1576333281794">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state width="1190" height="321" key="GridCell.Tab.0.left/67.27.1213.997@67.27.1213.997" timestamp="1575545605978" />
-    <state width="1190" height="321" key="GridCell.Tab.0.right" timestamp="1575545605978">
+    <state width="1190" height="199" key="GridCell.Tab.0.center/67.27.1213.997@67.27.1213.997" timestamp="1576333281794" />
+    <state width="1190" height="199" key="GridCell.Tab.0.left" timestamp="1576333281794">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state width="1190" height="321" key="GridCell.Tab.0.right/67.27.1213.997@67.27.1213.997" timestamp="1575545605978" />
-    <state width="1190" height="321" key="GridCell.Tab.1.bottom" timestamp="1575545605979">
+    <state width="1190" height="199" key="GridCell.Tab.0.left/67.27.1213.997@67.27.1213.997" timestamp="1576333281794" />
+    <state width="1190" height="199" key="GridCell.Tab.0.right" timestamp="1576333281794">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state width="1190" height="321" key="GridCell.Tab.1.bottom/67.27.1213.997@67.27.1213.997" timestamp="1575545605979" />
-    <state width="1190" height="321" key="GridCell.Tab.1.center" timestamp="1575545605978">
+    <state width="1190" height="199" key="GridCell.Tab.0.right/67.27.1213.997@67.27.1213.997" timestamp="1576333281794" />
+    <state width="1190" height="321" key="GridCell.Tab.1.bottom" timestamp="1575897211445">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state width="1190" height="321" key="GridCell.Tab.1.center/67.27.1213.997@67.27.1213.997" timestamp="1575545605978" />
-    <state width="1190" height="321" key="GridCell.Tab.1.left" timestamp="1575545605978">
+    <state width="1190" height="321" key="GridCell.Tab.1.bottom/67.27.1213.997@67.27.1213.997" timestamp="1575897211445" />
+    <state width="1190" height="321" key="GridCell.Tab.1.center" timestamp="1575897211444">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state width="1190" height="321" key="GridCell.Tab.1.left/67.27.1213.997@67.27.1213.997" timestamp="1575545605978" />
-    <state width="1190" height="321" key="GridCell.Tab.1.right" timestamp="1575545605978">
+    <state width="1190" height="321" key="GridCell.Tab.1.center/67.27.1213.997@67.27.1213.997" timestamp="1575897211444" />
+    <state width="1190" height="321" key="GridCell.Tab.1.left" timestamp="1575897211444">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state width="1190" height="321" key="GridCell.Tab.1.right/67.27.1213.997@67.27.1213.997" timestamp="1575545605978" />
+    <state width="1190" height="321" key="GridCell.Tab.1.left/67.27.1213.997@67.27.1213.997" timestamp="1575897211444" />
+    <state width="1190" height="321" key="GridCell.Tab.1.right" timestamp="1575897211445">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state width="1190" height="321" key="GridCell.Tab.1.right/67.27.1213.997@67.27.1213.997" timestamp="1575897211445" />
     <state width="606" height="499" key="XDebugger.FullValuePopup" timestamp="1575433038774">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
     <state width="606" height="499" key="XDebugger.FullValuePopup/67.27.1213.997@67.27.1213.997" timestamp="1575433038774" />
-    <state x="329" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1575520543492">
+    <state x="329" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1576294105740">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state x="329" y="352" key="com.intellij.ide.util.TipDialog/67.27.1213.997@67.27.1213.997" timestamp="1575520543492" />
+    <state x="329" y="352" key="com.intellij.ide.util.TipDialog/67.27.1213.997@67.27.1213.997" timestamp="1576294105740" />
+    <state x="441" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576039815233">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state x="441" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.1213.997@67.27.1213.997" timestamp="1576039815233" />
     <state x="179" y="185" width="998" height="712" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1575459579482">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
     <state x="179" y="185" width="998" height="712" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/67.27.1213.997@67.27.1213.997" timestamp="1575459579482" />
+    <state x="336" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1575626124100">
+      <screen x="67" y="27" width="1213" height="997" />
+    </state>
+    <state x="336" y="243" width="672" height="678" key="search.everywhere.popup/67.27.1213.997@67.27.1213.997" timestamp="1575626124100" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

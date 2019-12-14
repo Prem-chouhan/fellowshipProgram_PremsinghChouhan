@@ -472,3 +472,4 @@ class Queue:
         balance = balance + amount
         self.enqueue(amount)
         return balance
+

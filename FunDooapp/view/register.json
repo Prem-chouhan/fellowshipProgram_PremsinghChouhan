@@ -1,0 +1,13 @@
+{
+    "commercial data":
+    [
+        {
+            "fname": "prem",
+            "lname": "chouhan",
+            "email": "premchouhan@gmail.com",
+            "password": "Premsingh",
+            "confirm_password": "Premsingh"
+        }
+    ]
+
+}

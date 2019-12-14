@@ -73,12 +73,10 @@ with open('distros.json') as readfile:
     data = json.load(readfile)
     lst = ['Rice', 'Pulses', "Wheat"]
     total = 0
-    print(lst)
     for outer_loop in range(len(lst)):
         for inner_loop in data[lst[outer_loop]]:
-            # print(inner_loop['price'])
-            print(total + inner_loop['price'])
-            # print(total)
+            print("This are Values for each person :----->", total + inner_loop["price"])
+            total = total + inner_loop['price']
 print("Total Amount spent is :-", total)
 
 with open("distros.json", 'w') as outfile:

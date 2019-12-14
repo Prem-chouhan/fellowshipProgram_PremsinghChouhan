@@ -14,6 +14,11 @@
             "company name": "mphasis",
             "company shares": 100,
             "share per price": 50
+        },
+        {
+            "company name": "infosys",
+            "company_shares": 100,
+            "share per price": 100
         }
     ]
 }

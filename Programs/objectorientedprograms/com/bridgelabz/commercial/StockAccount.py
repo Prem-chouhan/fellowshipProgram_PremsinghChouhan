@@ -42,6 +42,12 @@ with open("user.json", "w")as out_file:
 class stockAccount:
 
     def buy(self, username, buying_amount, company_name):
+        """
+        Here buyer with buy share and calculations are done of and
+        buying amount  share will be Purchased and remaining amount will be addedto the balance of customer
+        and number of shares will be also added
+        No return values
+        """
         counter_company = -1
         counter_user = -1
         with open("commercial.json")as readfile:
@@ -61,7 +67,7 @@ class stockAccount:
                     with open("commercial.json", "w") as update_file:
                         data_stock["commercial data"][counter_company] = {
                             "company name": company_name,
-                            "company shares": data_stock["commercial data"][counter_company][
+                            "company_shares": data_stock["commercial data"][counter_company][
                                                   "company shares"] - share_user,
                             "share per price": data_stock["commercial data"][counter_company][
                                 "share per price"]
@@ -83,6 +89,12 @@ class stockAccount:
                         json.dump(data_customer, update1_file, indent=4, sort_keys=True)
 
     def sell(self, user_name, selling_amount, company_name):
+        """
+        Here  user will sell share to the company acording to there price
+        and that amount will be added to the users account and Number of shares will be deducted
+        from the user and added to company
+        No return variables
+        """
         counter_company = -1
         counter_user = -1
         with open("commercial.json")as readfile:
@@ -125,6 +137,9 @@ class stockAccount:
                         json.dump(data_customer, update1_file, indent=4, sort_keys=True)
 
     def check_user(self, username):
+        """
+        Here User validation will be done if the user is valid or Not
+        """
         json_data = open('user.json', 'r')
         data_customer = json.load(json_data)
         for value in data_customer['user details']:
@@ -133,9 +148,12 @@ class stockAccount:
                 return value["customer name"]
 
     def add_user(self, username):
+        """
+        If user is not Valid then the entry of new user will be done
+        """
         json_data = open('user.json', 'r')
         data_customer = json.load(json_data)
-        balance = input("Enter the  Balance For New buyer:- ")
+        balance = int(input("Enter the  Balance For New buyer:- "))
         # username = data_customer["user details"][0]["customer name"]
         # balance = data_customer["user details"][0]["customer balance"]
         with open("user.json", "w") as update1_file:
@@ -147,6 +165,7 @@ class stockAccount:
             json.dump(data_customer, update1_file, indent=4, sort_keys=True)
 
     def check_company(self, company_name):
+        """here Validtion of company will be done if the company is present or not"""
         json_data = open('commercial.json', 'r')
         data_new_company = json.load(json_data)
         for value in data_new_company['commercial data']:
@@ -156,16 +175,17 @@ class stockAccount:
                 return value["company name"]
 
     def add_company(self, company_name):
+        """Here if company is not present in then it will be added"""
         json_data = open('commercial.json', 'r')
         data_new_company = json.load(json_data)
-        new_comp_share = input("Enter the Number of shares New company have:- ")
-        rate_per_share = input("Enter amount per share company have:-")
+        new_comp_share = int(input("Enter the Number of shares New company have:- "))
+        rate_per_share = int(input("Enter amount per share company have:-"))
         # username = data_customer["user details"][0]["customer name"]
         # balance = data_customer["user details"][0]["customer balance"]
         with open("commercial.json", "w") as change_file:
             data_new_company["commercial data"].append({
                 "company name": company_name,
-                "company share": new_comp_share,
+                "company shares": new_comp_share,
                 "share per price": rate_per_share
             })
             json.dump(data_new_company, change_file, indent=4, sort_keys=True)

@@ -155,6 +155,24 @@
             "share number": 19,
             "share price": 100,
             "total price": 1900
+        },
+        {
+            "share name": "infosys",
+            "share number": 100,
+            "share price": 200,
+            "total price": 20000
+        },
+        {
+            "share name": "mphasi",
+            "share number": 18,
+            "share price": 200,
+            "total price": 3600
+        },
+        {
+            "share name": "infosys",
+            "share number": 20,
+            "share price": 200,
+            "total price": 4000
         }
     ]
 }
