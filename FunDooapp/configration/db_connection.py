@@ -1,13 +1,22 @@
 import mysql.connector
+import sys
+import os
+
+# sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/dotenv/')
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 class db_connection:
 
     def connection(self):
         self.mydb = mysql.connector.connect(
-            host="127.0.0.1",
-            user="root",
-            passwd="admin@123",
-            database="fundoo"
+            host=os.getenv("HOST"),
+            user=os.getenv("USER_db"),
+            passwd=os.getenv("PASSWD"),
+            database=os.getenv("DATABASE")
         )
         return self.mydb
+
+

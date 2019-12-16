@@ -2,33 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3485e27d-80c0-4995-9e64-fe5d0465fdf5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../FunDooapp/configration/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FunDooapp/configration/db_connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FunDooapp/model/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FunDooapp/model/query.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FunDooapp/server/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FunDooapp/server/server.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FunDooapp/templates/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FunDooapp/templates/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FunDooapp/view/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FunDooapp/view/register.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../FunDooapp/view/route.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Validation/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Validation/user.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designpatterns/adapter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/designpatterns/addresspattren.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FunDooapp/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FunDooapp/.idea/dictionaries/admin_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FunDooapp/templates/registersuccess.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../FunDooapp/view/response.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/addressbook/addressbook.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/cliniquemanagement/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/demo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/patterntest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/testcases/user/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunDooapp/configration/db_connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/configration/db_connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunDooapp/configration/http.server" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunDooapp/model/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/model/query.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunDooapp/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/server/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunDooapp/templates/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/templates/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunDooapp/view/demo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunDooapp/view/register.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunDooapp/view/route.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunDooapp/virtualenv/pyvenv.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/virtualenv/pyvenv.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datastructure/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/datastructure/Utility.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datastructure/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/designpatterns/demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/designpatterns/demo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/addressbook/addressbool.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/StockAccount.py" beforeDir="false" afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/StockAccount.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/commercial.json" beforeDir="false" afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/commercial/commercial.json" afterDir="false" />
@@ -322,10 +312,10 @@
       <screen x="67" y="27" width="1213" height="997" />
     </state>
     <state x="368" y="329" width="569" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1213.997@67.27.1213.997" timestamp="1575875621305" />
-    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576294133276">
+    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576472600361">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.997@67.27.1213.997" timestamp="1576294133276" />
+    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.997@67.27.1213.997" timestamp="1576472600361" />
     <state width="1190" height="199" key="GridCell.Tab.0.bottom" timestamp="1576333281795">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
@@ -362,10 +352,10 @@
       <screen x="67" y="27" width="1213" height="997" />
     </state>
     <state width="606" height="499" key="XDebugger.FullValuePopup/67.27.1213.997@67.27.1213.997" timestamp="1575433038774" />
-    <state x="329" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1576294105740">
+    <state x="329" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1576472585019">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state x="329" y="352" key="com.intellij.ide.util.TipDialog/67.27.1213.997@67.27.1213.997" timestamp="1576294105740" />
+    <state x="329" y="352" key="com.intellij.ide.util.TipDialog/67.27.1213.997@67.27.1213.997" timestamp="1576472585019" />
     <state x="441" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576039815233">
       <screen x="67" y="27" width="1213" height="997" />
     </state>

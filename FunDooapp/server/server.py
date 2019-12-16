@@ -1,12 +1,81 @@
-import http.server
-import socketserver
+import argparse
+import sys
+import json
 
-PORT = 8000
-Handler = http.server.SimpleHTTPRequestHandler
+sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/templates/')
+sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/view/')
 
-with socketserver.TCPServer(("", PORT), Handler) as httpd:
-    print("serving at port", PORT)
+from http.server import HTTPServer, BaseHTTPRequestHandler
+from registration import registration
+
+
+class S(BaseHTTPRequestHandler):
+    def _set_headers(self):
+        self.send_response(200)
+        self.send_header("Content-type", "text/html")
+        self.end_headers()
+
+    def _html(self, message):
+        """This just generates an HTML document that includes `message`
+        in the body. Override, or re-write this do do more interesting stuff.
+        """
+        content = f"<html><body><h1>{message}</h1></body></html>"
+        return content.encode("utf8")  # NOTE: must return a bytes object!
+
+
+    def do_GET(self):
+        self._set_headers()
+
+        if self.path == '/register':
+            with open('templates/register.html', 'r') as f:
+                html_string_register = f.read()
+                self.wfile.write(self._html(html_string_register))
+
+        elif self.path == '/login':
+            with open('templates/login.html', 'r') as f:
+                html_string_login = f.read()
+                # Response(self).html_response(status=202, data=html_string_register)
+                self.wfile.write(self._html(html_string_login))
+        else:
+            with open('templates/error.html', 'r') as f:
+                html_string_register = f.read()
+                # Response(self).html_response(status=202, data=html_string_register)
+                self.wfile.write(self._html(html_string_register))
+
+    def do_HEAD(self):
+        self._set_headers()
+
+    def do_POST(self):
+        # Doesn't do anything with posted data
+        obj = registration
+        store = obj.register(self)
+        obj.login(self)
+        self._set_headers()
+        self.wfile.write(self._html("Successfully Register!"))
+
+
+def run(server_class=HTTPServer, handler_class=S, addr="localhost", port=8888):
+    server_address = (addr, port)
+    httpd = server_class(server_address, handler_class)
+
+    print(f"Starting httpd server on {addr}:{port}")
     httpd.serve_forever()
 
 
-
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description="Run a simple HTTP server")
+    parser.add_argument(
+        "-l",
+        "--listen",
+        default="localhost",
+        help="Specify the IP address on which the server listens",
+    )
+    parser.add_argument(
+        "-p",
+        "--port",
+        type=int,
+        default=8888,
+        help="Specify the port on which the server listens",
+    )
+    args = parser.parse_args()
+    run(addr=args.listen, port=args.port)
