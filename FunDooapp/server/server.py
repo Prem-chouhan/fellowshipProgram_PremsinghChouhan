@@ -7,13 +7,14 @@ sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/view/')
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from registration import registration
+from response import Response
 
 
 class S(BaseHTTPRequestHandler):
     def _set_headers(self):
-        self.send_response(200)
-        self.send_header("Content-type", "text/html")
-        self.end_headers()
+        # self.send_response(200)
+        self.send_header("Content-type", "json")
+        # self.end_headers()
 
     def _html(self, message):
         """This just generates an HTML document that includes `message`
@@ -22,36 +23,45 @@ class S(BaseHTTPRequestHandler):
         content = f"<html><body><h1>{message}</h1></body></html>"
         return content.encode("utf8")  # NOTE: must return a bytes object!
 
-
     def do_GET(self):
         self._set_headers()
 
         if self.path == '/register':
-            with open('templates/register.html', 'r') as f:
-                html_string_register = f.read()
-                self.wfile.write(self._html(html_string_register))
+            # with open('templates/register.html', 'r') as f:
+            #     html_string_register = f.read()
+            #     self.wfile.write(self._html(html_string_register))
+            response_data = {'success': True, "data": [], "message": "Registered Successfully"}
+            Response(self).jsonResponse(status=404, data=response_data)
 
         elif self.path == '/login':
-            with open('templates/login.html', 'r') as f:
-                html_string_login = f.read()
-                # Response(self).html_response(status=202, data=html_string_register)
-                self.wfile.write(self._html(html_string_login))
-        else:
-            with open('templates/error.html', 'r') as f:
-                html_string_register = f.read()
-                # Response(self).html_response(status=202, data=html_string_register)
-                self.wfile.write(self._html(html_string_register))
+            # with open('templates/login.html', 'r') as f:
+            #     html_string_login = f.read()
+            #     self.wfile.write(self._html(html_string_login))
+            response_data = {'success': True, "data": [], "message": "Login Successfully"}
+            Response(self).jsonResponse(status=404, data=response_data)
+
+        # else:
+            # with open('templates/error.html', 'r') as f:
+            #     html_string_register = f.read()
+            #     self.wfile.write(self._html(html_string_register))
+            # response_data = {'success': False, "data": [], "message": "URL Invalid"}
+            # Response(self).jsonResponse(status=404, data=response_data)
 
     def do_HEAD(self):
         self._set_headers()
 
     def do_POST(self):
         # Doesn't do anything with posted data
-        obj = registration
-        store = obj.register(self)
-        obj.login(self)
+        if self.path == '/register':
+            obj = registration
+            obj.register(self)
+        elif self.path == '/login':
+            obj = registration
+            obj.login(self)
+        else:
+            response_data = {'success': False, "data": [], "message": "URL Invalid"}
+            Response(self).jsonResponse(status=404, data=response_data)
         self._set_headers()
-        self.wfile.write(self._html("Successfully Register!"))
 
 
 def run(server_class=HTTPServer, handler_class=S, addr="localhost", port=8888):

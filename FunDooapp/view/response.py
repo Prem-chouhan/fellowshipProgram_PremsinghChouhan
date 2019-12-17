@@ -6,9 +6,8 @@ class Response:
         self.Response = that
 
     def jsonResponse(self, status, data):
-        print(self.Response, '-------->')
         self.Response.send_response(status)
-        self.Response.send_header('Content-type', 'text/json')
+        self.Response.send_header('Content-type', 'json')
         self.Response.end_headers()
         self.Response.wfile.write(json.dumps(data).encode())
 

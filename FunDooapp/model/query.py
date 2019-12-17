@@ -11,17 +11,32 @@ class DbManaged:
         self.mycursor = self.mydb.cursor()
 
     def registration(self, data):
-        print("inside", data)
         sql = "INSERT INTO Registration(email,password,confirm_password) VALUES (%s, %s, %s)"
         val = (data['email'], data['password'], data['confirm_password'])
-        print(sql)
         self.mycursor.execute(sql, val)
         self.mydb.commit()
-        # print(mycursor.rowcount, "record inserted.")
 
-    def login(self, data):
+    def login_user(self, data):
         sql = "INSERT INTO Login(username,password) VALUES (%s, %s)"
         val = (data['username'], data['password'])
-        print(sql)
         self.mycursor.execute(sql, val)
         self.mydb.commit()
+
+    def email_address_exists(self, data):
+        sql = "SELECT email FROM Registration where email = '" + data['email'] + "'"
+        self.mycursor.execute(sql)
+        my_result = self.mycursor.fetchall()
+        if len(my_result):
+            return False
+        else:
+            return True
+
+    def username_exists(self, data):
+        print("inside username")
+        sql = "SELECT username FROM Login where username = '" + data['username'] + "'"
+        self.mycursor.execute(sql)
+        my_result = self.mycursor.fetchall()
+        if len(my_result):
+            return False
+        else:
+            return True
