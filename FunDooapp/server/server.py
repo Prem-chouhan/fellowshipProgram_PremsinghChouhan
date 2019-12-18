@@ -12,9 +12,9 @@ from response import Response
 
 class S(BaseHTTPRequestHandler):
     def _set_headers(self):
-        # self.send_response(200)
+        self.send_response(200)
         self.send_header("Content-type", "json")
-        # self.end_headers()
+        self.end_headers()
 
     def _html(self, message):
         """This just generates an HTML document that includes `message`
@@ -24,21 +24,28 @@ class S(BaseHTTPRequestHandler):
         return content.encode("utf8")  # NOTE: must return a bytes object!
 
     def do_GET(self):
-        self._set_headers()
+        pass
+        # self._set_headers()
+        if self.path == '/forgot':
+            obj = registration
+            obj.forgot_password(self)
+            # response_data = {'success': True, "data": [], "message": "Password Updated  Successfully"}
+            # Response(self).jsonResponse(status=200, data=response_data)
 
-        if self.path == '/register':
-            # with open('templates/register.html', 'r') as f:
-            #     html_string_register = f.read()
-            #     self.wfile.write(self._html(html_string_register))
-            response_data = {'success': True, "data": [], "message": "Registered Successfully"}
-            Response(self).jsonResponse(status=404, data=response_data)
 
-        elif self.path == '/login':
-            # with open('templates/login.html', 'r') as f:
-            #     html_string_login = f.read()
-            #     self.wfile.write(self._html(html_string_login))
-            response_data = {'success': True, "data": [], "message": "Login Successfully"}
-            Response(self).jsonResponse(status=404, data=response_data)
+        # if self.path == '/register':
+        #     # with open('templates/register.html', 'r') as f:
+        #     #     html_string_register = f.read()
+        #     #     self.wfile.write(self._html(html_string_register))
+        #     response_data = {'success': True, "data": [], "message": "Registered Successfully"}
+        #     Response(self).jsonResponse(status=200, data=response_data)
+        #
+        # elif self.path == '/login':
+        #     # with open('templates/login.html', 'r') as f:
+        #     #     html_string_login = f.read()
+        #     #     self.wfile.write(self._html(html_string_login))
+        #     response_data = {'success': True, "data": [], "message": "Login Successfully"}
+        #     Response(self).jsonResponse(status=200, data=response_data)
 
         # else:
             # with open('templates/error.html', 'r') as f:
@@ -48,7 +55,8 @@ class S(BaseHTTPRequestHandler):
             # Response(self).jsonResponse(status=404, data=response_data)
 
     def do_HEAD(self):
-        self._set_headers()
+        # self._set_headers()
+        pass
 
     def do_POST(self):
         # Doesn't do anything with posted data
@@ -61,13 +69,12 @@ class S(BaseHTTPRequestHandler):
         else:
             response_data = {'success': False, "data": [], "message": "URL Invalid"}
             Response(self).jsonResponse(status=404, data=response_data)
-        self._set_headers()
+        # self._set_headers()
 
 
 def run(server_class=HTTPServer, handler_class=S, addr="localhost", port=8888):
     server_address = (addr, port)
     httpd = server_class(server_address, handler_class)
-
     print(f"Starting httpd server on {addr}:{port}")
     httpd.serve_forever()
 

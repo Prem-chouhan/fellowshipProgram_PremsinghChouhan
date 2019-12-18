@@ -11,11 +11,11 @@ class Response:
         self.Response.end_headers()
         self.Response.wfile.write(json.dumps(data).encode())
 
-    def html_response(self, status, data):
-        self.Response.send_response(status)
-        self.Response.send_header('Content-type', 'text/html')
-        self.Response.end_headers()
-        self.Response.wfile.write(data.encode("utf8"))
+    # def html_response(self, status, data):
+    #     self.Response.send_response(status)
+    #     self.Response.send_header('Content-type', 'text/html')
+    #     self.Response.end_headers()
+    #     self.Response.wfile.write(data.encode("utf8"))
 
     def HTTPHandler400(self):
         pass
