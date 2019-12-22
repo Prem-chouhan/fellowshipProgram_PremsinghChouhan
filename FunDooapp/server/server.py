@@ -1,6 +1,8 @@
 import argparse
 import sys
 import json
+import jwt
+import cgi
 
 sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/templates/')
 sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/view/')
@@ -8,6 +10,7 @@ sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/view/')
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from registration import registration
 from response import Response
+from query import DbManaged
 
 
 class S(BaseHTTPRequestHandler):
@@ -24,52 +27,71 @@ class S(BaseHTTPRequestHandler):
         return content.encode("utf8")  # NOTE: must return a bytes object!
 
     def do_GET(self):
-        pass
-        # self._set_headers()
-        if self.path == '/forgot':
-            obj = registration
-            obj.forgot_password(self)
-            # response_data = {'success': True, "data": [], "message": "Password Updated  Successfully"}
-            # Response(self).jsonResponse(status=200, data=response_data)
+        self._set_headers()
 
-
-        # if self.path == '/register':
-        #     # with open('templates/register.html', 'r') as f:
-        #     #     html_string_register = f.read()
-        #     #     self.wfile.write(self._html(html_string_register))
-        #     response_data = {'success': True, "data": [], "message": "Registered Successfully"}
-        #     Response(self).jsonResponse(status=200, data=response_data)
-        #
-        # elif self.path == '/login':
-        #     # with open('templates/login.html', 'r') as f:
-        #     #     html_string_login = f.read()
-        #     #     self.wfile.write(self._html(html_string_login))
-        #     response_data = {'success': True, "data": [], "message": "Login Successfully"}
-        #     Response(self).jsonResponse(status=200, data=response_data)
-
-        # else:
-            # with open('templates/error.html', 'r') as f:
-            #     html_string_register = f.read()
-            #     self.wfile.write(self._html(html_string_register))
-            # response_data = {'success': False, "data": [], "message": "URL Invalid"}
-            # Response(self).jsonResponse(status=404, data=response_data)
-
-    def do_HEAD(self):
-        # self._set_headers()
-        pass
-
-    def do_POST(self):
-        # Doesn't do anything with posted data
         if self.path == '/register':
-            obj = registration
-            obj.register(self)
+            with open('templates/register.html', 'r') as f:
+                html_string_register = f.read()
+                self.wfile.write(self._html(html_string_register))
+
         elif self.path == '/login':
-            obj = registration
-            obj.login(self)
+            with open('templates/login.html', 'r') as f:
+                html_string_login = f.read()
+                self.wfile.write(self._html(html_string_login))
+
+        elif self.path == '/forgot':
+            with open('templates/forgot.html', 'r') as f:
+                html_string_login = f.read()
+                self.wfile.write(self._html(html_string_login))
+
+        elif '/reset' in self.path:
+            from urllib.parse import urlparse, parse_qs
+            query_components = parse_qs(urlparse(self.path).query)
+            token = query_components["token"][0]
+            with open('templates/reset.html', 'r') as f:
+                html_string_register = f.read()
+                output = html_string_register.format(result=token)
+                self.wfile.write(self._html(output))
+
+
         else:
             response_data = {'success': False, "data": [], "message": "URL Invalid"}
             Response(self).jsonResponse(status=404, data=response_data)
-        # self._set_headers()
+            with open('templates/error.html', 'r') as f:
+                html_string_register = f.read()
+                self.wfile.write(self._html(html_string_register))
+
+    def do_HEAD(self):
+        self._set_headers()
+        pass
+
+    def do_POST(self):
+        if self.path == '/register':
+            obj = registration
+            obj.register(self)
+
+        elif self.path == '/login':
+            obj = registration
+            obj.login(self)
+
+        elif self.path == '/forgot':
+            obj = registration
+            obj.forgot_password(self)
+
+        elif '/reset' in self.path:
+            print("hduichdnuc")
+            from urllib.parse import urlparse, parse_qs
+            query_components = parse_qs(urlparse(self.path).query)
+            token = query_components["token"][0]
+            token = jwt.decode(token, "secret", algorithms='HS256')
+            key = token["email_id"]
+            print(key)
+            obj = registration
+            obj.store(self, key)
+
+        else:
+            response_data = {'success': False, "data": [], "message": "URL Invalid"}
+            Response(self).jsonResponse(status=404, data=response_data)
 
 
 def run(server_class=HTTPServer, handler_class=S, addr="localhost", port=8888):

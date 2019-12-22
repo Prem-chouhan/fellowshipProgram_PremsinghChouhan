@@ -13,9 +13,11 @@ class db_connection:
     def connection(self):
         self.mydb = mysql.connector.connect(
             host=os.getenv("HOST"),
+            port=os.getenv("PORT"),
             user=os.getenv("USER_db"),
             passwd=os.getenv("PASSWD"),
-            database=os.getenv("DATABASE")
+            database=os.getenv("DATABASE"),
+
         )
         return self.mydb
 

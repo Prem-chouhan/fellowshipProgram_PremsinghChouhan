@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3485e27d-80c0-4995-9e64-fe5d0465fdf5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Fun/.idea/Fun.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/addressbook/addressbook.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunDooapp/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunDooapp/configration/db_connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/configration/db_connection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FunDooapp/model/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/model/query.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FunDooapp/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/server/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FunDooapp/view/registration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/view/registration.py" afterDir="false" />
@@ -34,7 +37,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/objectorientedprograms" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1TuovvXZ1mLDgB0hgyKQiBcFJg2" />
@@ -308,22 +311,22 @@
       <screen x="67" y="27" width="1213" height="997" />
     </state>
     <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.997@67.27.1213.997" timestamp="1576472600361" />
-    <state width="1190" height="199" key="GridCell.Tab.0.bottom" timestamp="1576333281795">
+    <state width="1190" height="199" key="GridCell.Tab.0.bottom" timestamp="1576679725844">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state width="1190" height="199" key="GridCell.Tab.0.bottom/67.27.1213.997@67.27.1213.997" timestamp="1576333281795" />
-    <state width="1190" height="199" key="GridCell.Tab.0.center" timestamp="1576333281794">
+    <state width="1190" height="199" key="GridCell.Tab.0.bottom/67.27.1213.997@67.27.1213.997" timestamp="1576679725844" />
+    <state width="1190" height="199" key="GridCell.Tab.0.center" timestamp="1576679725843">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state width="1190" height="199" key="GridCell.Tab.0.center/67.27.1213.997@67.27.1213.997" timestamp="1576333281794" />
-    <state width="1190" height="199" key="GridCell.Tab.0.left" timestamp="1576333281794">
+    <state width="1190" height="199" key="GridCell.Tab.0.center/67.27.1213.997@67.27.1213.997" timestamp="1576679725843" />
+    <state width="1190" height="199" key="GridCell.Tab.0.left" timestamp="1576679725842">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state width="1190" height="199" key="GridCell.Tab.0.left/67.27.1213.997@67.27.1213.997" timestamp="1576333281794" />
-    <state width="1190" height="199" key="GridCell.Tab.0.right" timestamp="1576333281794">
+    <state width="1190" height="199" key="GridCell.Tab.0.left/67.27.1213.997@67.27.1213.997" timestamp="1576679725842" />
+    <state width="1190" height="199" key="GridCell.Tab.0.right" timestamp="1576679725843">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state width="1190" height="199" key="GridCell.Tab.0.right/67.27.1213.997@67.27.1213.997" timestamp="1576333281794" />
+    <state width="1190" height="199" key="GridCell.Tab.0.right/67.27.1213.997@67.27.1213.997" timestamp="1576679725843" />
     <state width="1190" height="321" key="GridCell.Tab.1.bottom" timestamp="1575897211445">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
