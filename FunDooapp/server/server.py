@@ -89,6 +89,10 @@ class S(BaseHTTPRequestHandler):
             obj = registration
             obj.store(self, key)
 
+        # elif self.path == '/create':
+        #     obj = registration
+        #     obj.create(self)
+
         else:
             response_data = {'success': False, "data": [], "message": "URL Invalid"}
             Response(self).jsonResponse(status=404, data=response_data)

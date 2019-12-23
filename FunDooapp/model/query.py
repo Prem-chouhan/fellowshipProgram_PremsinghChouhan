@@ -4,10 +4,14 @@ from email.mime.multipart import MIMEMultipart
 import smtplib
 import socket
 from email.mime.text import MIMEText
+
 sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/configration/')
 from db_connection import *
+
 sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/templates/')
 import os
+
+
 class DbManaged:
     def __init__(self):
         mydbobj = db_connection()
@@ -96,7 +100,6 @@ class DbManaged:
 
         msg = MIMEText(message)
 
-
         # msg = MIMEText(u'<a href="www.google.com">127.0.0.1:localhost/8080</a>', 'html')
         # sending the mail
         s.sendmail(os.getenv("SMTP_EXCHANGE_USER_LOGIN"), emailid, msg.as_string())
@@ -104,11 +107,14 @@ class DbManaged:
         # terminating the session
         s.quit()
 
-
-
-
-
-
-
-
-
+    # def query_create(self, data):
+    #     sql = "INSERT INTO crud(tittle,description,color,isPinned,isArchive,isTrash) VALUES (%s,%s,%s,%s,%s,%s)"
+    #     val = (data['tittle'], data['description'], data['color'], data['isPinned'], data['isArchive'], data['isTrash'])
+    #     print(sql, val)
+    #     self.mycursor.execute(sql, val)
+    #     self.mydb.commit()
+    #
+    # def query_update(self, data):
+    #     sql = "UPDATE crud SET tittle = '" + data['tittle'] + "' WHERE id = '" + data['id'] + "' "
+    #     self.mycursor.execute(sql)
+    #     self.mydb.commit()
