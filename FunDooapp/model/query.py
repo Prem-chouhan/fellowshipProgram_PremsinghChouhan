@@ -107,14 +107,33 @@ class DbManaged:
         # terminating the session
         s.quit()
 
-    # def query_create(self, data):
-    #     sql = "INSERT INTO crud(tittle,description,color,isPinned,isArchive,isTrash) VALUES (%s,%s,%s,%s,%s,%s)"
-    #     val = (data['tittle'], data['description'], data['color'], data['isPinned'], data['isArchive'], data['isTrash'])
-    #     print(sql, val)
-    #     self.mycursor.execute(sql, val)
-    #     self.mydb.commit()
-    #
-    # def query_update(self, data):
-    #     sql = "UPDATE crud SET tittle = '" + data['tittle'] + "' WHERE id = '" + data['id'] + "' "
-    #     self.mycursor.execute(sql)
-    #     self.mydb.commit()
+    def query_insert(self, data):
+        sql = "INSERT INTO crud(tittle,description,color,isPinned,isArchive,isTrash) VALUES (%s,%s,%s,%s,%s,%s)"
+        val = (data['tittle'], data['description'], data['color'], data['isPinned'], data['isArchive'], data['isTrash'])
+        print(sql, val)
+        self.mycursor.execute(sql, val)
+        self.mydb.commit()
+
+    def query_update(self, data):
+        sql = "UPDATE crud SET tittle = '" + data['tittle'] + "' WHERE id = '" + data['id'] + "' "
+        self.mycursor.execute(sql)
+        self.mydb.commit()
+
+    def query_delete(self, data):
+        sql = "DELETE FROM crud WHERE id = '" + data['id'] + "'"
+        self.mycursor.execute(sql)
+        self.mydb.commit()
+
+    def query_read(self, data):
+        print(data['tablename'])
+        sql = "select * from " + data['tablename'] + ""
+        self.mycursor.execute(sql)
+        print(self.mycursor.fetchall())
+
+    def query_create(self, data):
+        key = data['tablename']
+        print(key)
+        sql = "CREATE TABLE " + key + "(id int NOT NULL AUTO_INCREMENT,LastName varchar(255) NOT NULL,FirstName " \
+                                      "varchar(255),Age int,PRIMARY KEY (id)) "
+        self.mycursor.execute(sql)
+        self.mydb.commit()

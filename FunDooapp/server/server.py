@@ -52,7 +52,9 @@ class S(BaseHTTPRequestHandler):
                 html_string_register = f.read()
                 output = html_string_register.format(result=token)
                 self.wfile.write(self._html(output))
-
+        elif self.path == '/read':
+            obj = registration
+            obj.read(self)
 
         else:
             response_data = {'success': False, "data": [], "message": "URL Invalid"}
@@ -79,7 +81,6 @@ class S(BaseHTTPRequestHandler):
             obj.forgot_password(self)
 
         elif '/reset' in self.path:
-            print("hduichdnuc")
             from urllib.parse import urlparse, parse_qs
             query_components = parse_qs(urlparse(self.path).query)
             token = query_components["token"][0]
@@ -89,13 +90,27 @@ class S(BaseHTTPRequestHandler):
             obj = registration
             obj.store(self, key)
 
-        # elif self.path == '/create':
-        #     obj = registration
-        #     obj.create(self)
+        elif self.path == '/insert':
+            obj = registration
+            obj.insert(self)
+
+        elif self.path == '/create':
+            obj = registration
+            obj.create(self)
 
         else:
             response_data = {'success': False, "data": [], "message": "URL Invalid"}
             Response(self).jsonResponse(status=404, data=response_data)
+
+    def do_PUT(self):
+        if self.path == '/update':
+            obj = registration
+            obj.update(self)
+
+    def do_DELETE(self):
+        if self.path == '/delete':
+            obj = registration
+            obj.delete(self)
 
 
 def run(server_class=HTTPServer, handler_class=S, addr="localhost", port=8888):

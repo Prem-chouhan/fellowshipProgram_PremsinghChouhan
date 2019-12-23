@@ -192,36 +192,85 @@ class registration:
         response_data = {'success': False, "data": [], "message": "Password Updated Successfully"}
         Response(self).jsonResponse(status=404, data=response_data)
 
-    # def create(self):
-    #     form = cgi.FieldStorage(
-    #         fp=self.rfile,
-    #         headers=self.headers,
-    #         environ={'REQUEST_METHOD': 'POST',
-    #                  'CONTENT_TYPE': self.headers['Content-Type'],
-    #                  })
-    #     response_data = {'success': True, "data": [], "message": ""}
-    #     my_db_obj = DbManaged()
-    #     data = {}
-    #     data['tittle'] = form['tittle'].value
-    #     data['description'] = form['description'].value
-    #     data['color'] = form['color'].value
-    #     data['isPinned'] = form['isPinned'].value
-    #     data['isArchive'] = form['isArchive'].value
-    #     data['isTrash'] = form['isTrash'].value
-    #     print(data)
-    #     my_db_obj.query_create(data)
-    #
-    # def update(self):
-    #     form = cgi.FieldStorage(
-    #         fp=self.rfile,
-    #         headers=self.headers,
-    #         environ={'REQUEST_METHOD': 'POST',
-    #                  'CONTENT_TYPE': self.headers['Content-Type'],
-    #                  })
-    #     response_data = {'success': True, "data": [], "message": ""}
-    #     my_db_obj = DbManaged()
-    #     data = {}
-    #     data['id'] = form['id'].value
-    #     data['tittle'] = form['tittle'].value
-    #     print(data)
-    #     my_db_obj.query_update(data)
+    def insert(self):
+        form = cgi.FieldStorage(
+            fp=self.rfile,
+            headers=self.headers,
+            environ={'REQUEST_METHOD': 'POST',
+                     'CONTENT_TYPE': self.headers['Content-Type'],
+                     })
+        my_db_obj = DbManaged()
+        data = {}
+        data['tittle'] = form['tittle'].value
+        data['description'] = form['description'].value
+        data['color'] = form['color'].value
+        data['isPinned'] = form['isPinned'].value
+        data['isArchive'] = form['isArchive'].value
+        data['isTrash'] = form['isTrash'].value
+        print(data)
+        my_db_obj.query_insert(data)
+        response_data = {'success': True, "data": [], "message": "Inserted Successfully"}
+        Response(self).jsonResponse(status=404, data=response_data)
+
+    def update(self):
+        form = cgi.FieldStorage(
+            fp=self.rfile,
+            headers=self.headers,
+            environ={'REQUEST_METHOD': 'POST',
+                     'CONTENT_TYPE': self.headers['Content-Type'],
+                     })
+        response_data = {'success': True, "data": [], "message": ""}
+        my_db_obj = DbManaged()
+        data = {}
+        data['id'] = form['id'].value
+        data['tittle'] = form['tittle'].value
+        print(data)
+        my_db_obj.query_update(data)
+        response_data = {'success': True, "data": [], "message": "Updated Successfully"}
+        Response(self).jsonResponse(status=404, data=response_data)
+
+    def delete(self):
+        form = cgi.FieldStorage(
+            fp=self.rfile,
+            headers=self.headers,
+            environ={'REQUEST_METHOD': 'POST',
+                     'CONTENT_TYPE': self.headers['Content-Type'],
+                     })
+        my_db_obj = DbManaged()
+        data = {}
+        data['id'] = form['id'].value
+        # data['tittle'] = form['tittle'].value
+        print(data)
+        my_db_obj.query_delete(data)
+        response_data = {'success': True, "data": [], "message": "Deleted Successfully"}
+        Response(self).jsonResponse(status=404, data=response_data)
+
+    def read(self):
+        form = cgi.FieldStorage(
+            fp=self.rfile,
+            headers=self.headers,
+            environ={'REQUEST_METHOD': 'POST',
+                     'CONTENT_TYPE': self.headers['Content-Type'],
+                     })
+        my_db_obj = DbManaged()
+        data = {}
+        data['tablename'] = form['tablename'].value
+        print(data)
+        my_db_obj.query_read(data)
+        response_data = {'success': True, "data": [], "message": "Read Successfully"}
+        Response(self).jsonResponse(status=404, data=response_data)
+
+    def create(self):
+        form = cgi.FieldStorage(
+            fp=self.rfile,
+            headers=self.headers,
+            environ={'REQUEST_METHOD': 'POST',
+                     'CONTENT_TYPE': self.headers['Content-Type'],
+                     })
+        my_db_obj = DbManaged()
+        data = {}
+        data['tablename'] = form['tablename'].value
+        print(data)
+        my_db_obj.query_create(data)
+        response_data = {'success': True, "data": [], "message": "created table Successfully"}
+        Response(self).jsonResponse(status=404, data=response_data)
