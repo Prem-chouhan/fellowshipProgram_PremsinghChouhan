@@ -2,25 +2,23 @@ import cgi
 import sys
 import os
 from email.mime.multipart import MIMEMultipart
-# from config.smtp_setup import smtplib
 import smtplib
 
 import jwt
 
 sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/model')
+
 sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/view')
 from query import DbManaged
 from response import Response
 
+my_db_obj = DbManaged()
 
-# JWT_EXP_DELTA_SECONDS = 20
-# JWT_SECRET = 'secret'
-# JWT_ALGORITHM = 'HS256'
 
 class registration:
+
     def register(self):
         try:
-            my_db_obj = DbManaged()
             if self.path == '/register':
                 form = cgi.FieldStorage(
                     fp=self.rfile,
@@ -80,9 +78,7 @@ class registration:
             data['username'] = form['username'].value
             data['password'] = form['password'].value
             response_data = {'success': True, "data": [], "message": ""}
-            my_db_obj = DbManaged()
-            print("ebdhbhcj")
-
+            # my_db_obj = DbManaged()
             success = my_db_obj.username_exists(data)
 
             if success:
@@ -97,6 +93,7 @@ class registration:
             pass
 
     def forgot_password(self):
+        global my_db_obj
         try:
             form = cgi.FieldStorage(
                 fp=self.rfile,
@@ -105,7 +102,7 @@ class registration:
                          'CONTENT_TYPE': self.headers['Content-Type'],
                          })
             response_data = {'success': True, "data": [], "message": ""}
-            my_db_obj = DbManaged()
+            # my_db_obj = DbManaged()
             data = {}
             data['email'] = form['email'].value
             present = my_db_obj.email_address_exists(data)
@@ -116,7 +113,7 @@ class registration:
                 email = data['email']
                 encoded = jwt.encode({"email_id": email}, 'secret', algorithm='HS256').decode("utf-8")
                 message = f"http://127.0.0.1:8888/reset/?token={encoded}"
-                my_db_obj = DbManaged()
+                # my_db_obj = DbManaged()
                 my_db_obj.smtp(email, message)
                 response_data.update({"success": True, "message": "Successfully sent mail"})
                 Response(self).jsonResponse(status=202, data=response_data)
@@ -129,50 +126,51 @@ class registration:
         except KeyError:
             pass
 
-    def reset_password(self):
-
-        form = cgi.FieldStorage(
-            fp=self.rfile,
-            headers=self.headers,
-            environ={'REQUEST_METHOD': 'POST',
-                     'CONTENT_TYPE': self.headers['Content-Type'],
-                     })
-        response_data = {'success': True, "data": [], "message": ""}
-        my_db_obj = DbManaged()
-        data = {}
-        print("dhhdj")
-        data['email'] = form['email'].value
-        email = data['email']
-        success = my_db_obj.email_address_exists(email)
-        if success:
-            response_data.update({"success": False, "message": "Wrong Credentials"})
-            Response(self).jsonResponse(status=202, data=response_data)
-        else:
-            form_keys = list(form.keys())
-            if len(form_keys) > 1:
-                response_data.update({"message": "Something Went Wrong"})
-                Response(self).jsonResponse(status=202, data=response_data)
-        msg = MIMEMultipart()
-        # payload = {'id': "x"}
-        # key = os.getenv("JWT_SECRET_KEY")
-        # algorithm = os.getenv("JWT_ALGORITHM")
-        # encoded = jwt.encode(payload=payload, key=key, algorithm=algorithm)
-        # print(encoded)
-        # message = f"http:(127.0.0.1/reset_token/{encoded}"
-        payload = {email}
-        key = os.getenv("JWT_SECRET_KEY")
-        algorithm = os.getenv("JWT_ALGORITHM")
-        encoded = jwt.encode(payload=payload, key=key, algorithm=algorithm).decode("utf-8")
-        message = f"http://127.0.0.1:8888/reset_pass/?token={encoded}"
-        my_db_obj = DbManaged()
-        my_db_obj.smtp(email, message)
-        from urllib.parse import urlparse, parse_qs
-        query_components = parse_qs(urlparse(self.path).query)
-        token = query_components["token"][0]
-        decoded = jwt.decode(token, "secret", algorithms='HS256')
-        print(decoded["email_id"])
-        # print(my_db_obj.encode_auth_token(email))
-        # print("successfully sent email to %s:" % (msg['To']))
+    # def reset_password(self):
+    #
+    #     global my_db_obj
+    #     form = cgi.FieldStorage(
+    #         fp=self.rfile,
+    #         headers=self.headers,
+    #         environ={'REQUEST_METHOD': 'POST',
+    #                  'CONTENT_TYPE': self.headers['Content-Type'],
+    #                  })
+    #     response_data = {'success': True, "data": [], "message": ""}
+    #     # my_db_obj = DbManaged()
+    #     data = {}
+    #     print("dhhdj")
+    #     data['email'] = form['email'].value
+    #     email = data['email']
+    #     success = my_db_obj.email_address_exists(email)
+    #     if success:
+    #         response_data.update({"success": False, "message": "Wrong Credentials"})
+    #         Response(self).jsonResponse(status=202, data=response_data)
+    #     else:
+    #         form_keys = list(form.keys())
+    #         if len(form_keys) > 1:
+    #             response_data.update({"message": "Something Went Wrong"})
+    #             Response(self).jsonResponse(status=202, data=response_data)
+    #     msg = MIMEMultipart()
+    #     # payload = {'id': "x"}
+    #     # key = os.getenv("JWT_SECRET_KEY")
+    #     # algorithm = os.getenv("JWT_ALGORITHM")
+    #     # encoded = jwt.encode(payload=payload, key=key, algorithm=algorithm)
+    #     # print(encoded)
+    #     # message = f"http:(127.0.0.1/reset_token/{encoded}"
+    #     payload = {email}
+    #     key = os.getenv("JWT_SECRET_KEY")
+    #     algorithm = os.getenv("JWT_ALGORITHM")
+    #     encoded = jwt.encode(payload=payload, key=key, algorithm=algorithm).decode("utf-8")
+    #     message = f"http://127.0.0.1:8888/reset_pass/?token={encoded}"
+    #     my_db_obj = DbManaged()
+    #     my_db_obj.smtp(email, message)
+    #     from urllib.parse import urlparse, parse_qs
+    #     query_components = parse_qs(urlparse(self.path).query)
+    #     token = query_components["token"][0]
+    #     decoded = jwt.decode(token, "secret", algorithms='HS256')
+    #     print(decoded["email_id"])
+    #     # print(my_db_obj.encode_auth_token(email))
+    #     # print("successfully sent email to %s:" % (msg['To']))
 
     def store(self, key):
 
@@ -183,7 +181,7 @@ class registration:
                      'CONTENT_TYPE': self.headers['Content-Type'],
                      })
         response_data = {'success': True, "data": [], "message": ""}
-        my_db_obj = DbManaged()
+        # my_db_obj = DbManaged()
         # response_data = {'success': False, "data": [], "message": "Enter New password in Postman"}
         # Response(self).jsonResponse(status=404, data=response_data)
         data = {}
@@ -199,7 +197,7 @@ class registration:
             environ={'REQUEST_METHOD': 'POST',
                      'CONTENT_TYPE': self.headers['Content-Type'],
                      })
-        my_db_obj = DbManaged()
+        # my_db_obj = DbManaged()
         data = {}
         data['tittle'] = form['tittle'].value
         data['description'] = form['description'].value
@@ -208,6 +206,7 @@ class registration:
         data['isArchive'] = form['isArchive'].value
         data['isTrash'] = form['isTrash'].value
         print(data)
+        # my = DbManaged()
         my_db_obj.query_insert(data)
         response_data = {'success': True, "data": [], "message": "Inserted Successfully"}
         Response(self).jsonResponse(status=404, data=response_data)
@@ -220,7 +219,7 @@ class registration:
                      'CONTENT_TYPE': self.headers['Content-Type'],
                      })
         response_data = {'success': True, "data": [], "message": ""}
-        my_db_obj = DbManaged()
+        # my_db_obj = DbManaged()
         data = {}
         data['id'] = form['id'].value
         data['tittle'] = form['tittle'].value
@@ -236,7 +235,7 @@ class registration:
             environ={'REQUEST_METHOD': 'POST',
                      'CONTENT_TYPE': self.headers['Content-Type'],
                      })
-        my_db_obj = DbManaged()
+        # my_db_obj = DbManaged()
         data = {}
         data['id'] = form['id'].value
         # data['tittle'] = form['tittle'].value
@@ -252,7 +251,7 @@ class registration:
             environ={'REQUEST_METHOD': 'POST',
                      'CONTENT_TYPE': self.headers['Content-Type'],
                      })
-        my_db_obj = DbManaged()
+        # my_db_obj = DbManaged()
         data = {}
         data['tablename'] = form['tablename'].value
         print(data)
@@ -267,7 +266,7 @@ class registration:
             environ={'REQUEST_METHOD': 'POST',
                      'CONTENT_TYPE': self.headers['Content-Type'],
                      })
-        my_db_obj = DbManaged()
+        # my_db_obj = DbManaged()
         data = {}
         data['tablename'] = form['tablename'].value
         print(data)

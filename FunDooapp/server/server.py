@@ -10,7 +10,6 @@ sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/view/')
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from registration import registration
 from response import Response
-from query import DbManaged
 
 
 class S(BaseHTTPRequestHandler):

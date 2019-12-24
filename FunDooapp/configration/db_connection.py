@@ -1,16 +1,30 @@
 import mysql.connector
 import sys
 import os
-
-# sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/dotenv/')
 from dotenv import load_dotenv
 
 load_dotenv()
+sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/model')
+# from query import DbManaged
 
 
 class db_connection:
 
-    def connection(self):
+    __instance = None
+
+    @staticmethod
+    def getInstance():
+        """ Static access method. """
+        if db_connection.__instance is None:
+            db_connection()
+        return db_connection.__instance
+
+    def __init__(self):
+        if db_connection.__instance is not None:
+            raise Exception("This class is a singleton!")
+        else:
+            db_connection.__instance = self
+
         self.mydb = mysql.connector.connect(
             host=os.getenv("HOST"),
             port=os.getenv("PORT"),
@@ -19,6 +33,28 @@ class db_connection:
             database=os.getenv("DATABASE"),
 
         )
-        return self.mydb
+
+    def queryExecute(self, sql, val):
+        self.mycursor = self.mydb.cursor()
+        self.mycursor.execute(sql, val)
+        self.mydb.commit()
+
+    def query(self, sql):
+        self.mycursor = self.mydb.cursor()
+        self.mycursor.execute(sql)
+        self.mydb.commit()
+
+    def queryfetch(self, sql):
+        self.mycursor = self.mydb.cursor()
+        self.mycursor.execute(sql)
+        self.mycursor.fetchall()
+        return True
+
+    def debugger(self):
+        pass
+
+    def disconnect(self):
+        self.mydb.close()
+        pass
 
 
