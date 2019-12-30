@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3485e27d-80c0-4995-9e64-fe5d0465fdf5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Fun/.idea/Fun.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/addressbook/addressbook.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FunDooapp/.env" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FunDooapp/configration/db_connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/configration/db_connection.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FunDooapp/model/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/model/query.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FunDooapp/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/server/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunDooapp/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunDooapp/testcases/TestClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/testcases/TestClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunDooapp/testcases/testcases.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/testcases/testcases.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FunDooapp/view/registration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/view/registration.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FunDooapp/view/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/view/response.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Fundoo" beforeDir="false" afterPath="$PROJECT_DIR$/../Fundoo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datastructure/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/datastructure/Utility.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datastructure/__init__.py" beforeDir="false" />

@@ -5,11 +5,12 @@ from dotenv import load_dotenv
 
 load_dotenv()
 sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/model')
+
+
 # from query import DbManaged
 
 
 class db_connection:
-
     __instance = None
 
     @staticmethod
@@ -47,8 +48,7 @@ class db_connection:
     def queryfetch(self, sql):
         self.mycursor = self.mydb.cursor()
         self.mycursor.execute(sql)
-        self.mycursor.fetchall()
-        return True
+        return self.mycursor.fetchall()
 
     def debugger(self):
         pass
@@ -57,4 +57,5 @@ class db_connection:
         self.mydb.close()
         pass
 
-
+    def __del__(self):
+        pass

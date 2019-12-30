@@ -7,14 +7,23 @@ import cgi
 sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/templates/')
 sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/view/')
 
+sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/model')
+from query import DbManaged
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from registration import registration
 from response import Response
 
+JWT_SECRET = 'secret'
+JWT_ALGORITHM = 'HS256'
+JWT_EXP_DELTA_SECONDS = 120
+import pdb
+
 
 class S(BaseHTTPRequestHandler):
+
     def _set_headers(self):
         self.send_response(200)
+
         self.send_header("Content-type", "json")
         self.end_headers()
 
@@ -54,10 +63,24 @@ class S(BaseHTTPRequestHandler):
         elif self.path == '/read':
             obj = registration
             obj.read(self)
+        elif self.path == '/upload':
+            with open('templates/profileupload.html', 'r') as f:
+                html_string_register = f.read()
+                self.wfile.write(self._html(html_string_register))
+
+        elif self.path == '/listing':
+            obj = registration
+            catch, respon, res = obj.list(self)
+            response_data = {'success': True, "data": [], "message": "This is listing Of isPinned{}".format(catch)}
+            Response(self).jsonResponse(status=404, data=response_data)
+            response_data = {'success': True, "data": [], "message": "This is listing Of isTrash{}".format(respon)}
+            Response(self).jsonResponse(status=404, data=response_data)
+            response_data = {'success': True, "data": [], "message": "This is listing Of isArchive{}".format(res)}
+            Response(self).jsonResponse(status=404, data=response_data)
 
         else:
-            response_data = {'success': False, "data": [], "message": "URL Invalid"}
-            Response(self).jsonResponse(status=404, data=response_data)
+            # response_data = {'success': False, "data": [], "message": "URL Invalid"}
+            # Response(self).jsonResponse(status=404, data=response_data)
             with open('templates/error.html', 'r') as f:
                 html_string_register = f.read()
                 self.wfile.write(self._html(html_string_register))
@@ -67,6 +90,7 @@ class S(BaseHTTPRequestHandler):
         pass
 
     def do_POST(self):
+
         if self.path == '/register':
             obj = registration
             obj.register(self)
@@ -91,11 +115,24 @@ class S(BaseHTTPRequestHandler):
 
         elif self.path == '/insert':
             obj = registration
-            obj.insert(self)
+            print(self.headers['token'])
+            catch = self.headers['token']
+            flag = obj.auth(self, catch)
+            if flag:
+                obj = registration
+                obj.insert(self)
+            else:
+                response_data = {'success': False, "data": [], "message": "User Should have to register"}
+                Response(self).jsonResponse(status=404, data=response_data)
 
         elif self.path == '/create':
             obj = registration
             obj.create(self)
+
+        elif self.path == '/profile':
+            obj = registration
+            obj.updateProfile(self)
+
 
         else:
             response_data = {'success': False, "data": [], "message": "URL Invalid"}
@@ -104,12 +141,28 @@ class S(BaseHTTPRequestHandler):
     def do_PUT(self):
         if self.path == '/update':
             obj = registration
-            obj.update(self)
+            print(self.headers['token'])
+            catch = self.headers['token']
+            flag = obj.auth(self, catch)
+            if flag:
+                obj = registration
+                obj.update(self)
+            else:
+                response_data = {'success': False, "data": [], "message": "User Should have to register"}
+                Response(self).jsonResponse(status=404, data=response_data)
 
     def do_DELETE(self):
         if self.path == '/delete':
             obj = registration
-            obj.delete(self)
+            print(self.headers['token'])
+            catch = self.headers['token']
+            flag = obj.auth(self, catch)
+            if flag:
+                obj = registration
+                obj.delete(self)
+            else:
+                response_data = {'success': False, "data": [], "message": "User Should have to register"}
+                Response(self).jsonResponse(status=404, data=response_data)
 
 
 def run(server_class=HTTPServer, handler_class=S, addr="localhost", port=8888):
