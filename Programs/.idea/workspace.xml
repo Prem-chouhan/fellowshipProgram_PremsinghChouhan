@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3485e27d-80c0-4995-9e64-fe5d0465fdf5" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/addressbook/addressbook.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FunDooapp/configration/db_connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/configration/db_connection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FunDooapp/model/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/model/query.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FunDooapp/server/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/server/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FunDooapp/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FunDooapp/testcases/TestClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/testcases/TestClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../FunDooapp/testcases/testcases.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/testcases/testcases.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FunDooapp/view/registration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/view/registration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datastructure/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/datastructure/Utility.py" afterDir="false" />
@@ -49,7 +44,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FunDooapp" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -306,10 +301,10 @@
       <screen x="67" y="27" width="1213" height="997" />
     </state>
     <state x="368" y="329" width="569" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1213.997@67.27.1213.997" timestamp="1575875621305" />
-    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576472600361">
+    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl" timestamp="1577765768941">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.997@67.27.1213.997" timestamp="1576472600361" />
+    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.997@67.27.1213.997" timestamp="1577765768941" />
     <state width="1190" height="199" key="GridCell.Tab.0.bottom" timestamp="1576679725844">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
@@ -346,10 +341,10 @@
       <screen x="67" y="27" width="1213" height="997" />
     </state>
     <state width="606" height="499" key="XDebugger.FullValuePopup/67.27.1213.997@67.27.1213.997" timestamp="1575433038774" />
-    <state x="329" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1576472585019">
+    <state x="329" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1577765750298">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state x="329" y="352" key="com.intellij.ide.util.TipDialog/67.27.1213.997@67.27.1213.997" timestamp="1576472585019" />
+    <state x="329" y="352" key="com.intellij.ide.util.TipDialog/67.27.1213.997@67.27.1213.997" timestamp="1577765750298" />
     <state x="441" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576039815233">
       <screen x="67" y="27" width="1213" height="997" />
     </state>

@@ -218,10 +218,6 @@ class registration:
             environ={'REQUEST_METHOD': 'POST',
                      'CONTENT_TYPE': self.headers['Content-Type'],
                      })
-        response_data = {'success': True, "data": [], "message": ""}
-        # my_db_obj = DbManaged()
-        # response_data = {'success': False, "data": [], "message": "Enter New password in Postman"}
-        # Response(self).jsonResponse(status=404, data=response_data)
         data = {}
         data['password'] = form['password'].value
         my_db_obj.update_password(data, key)
@@ -239,7 +235,6 @@ class registration:
             environ={'REQUEST_METHOD': 'POST',
                      'CONTENT_TYPE': self.headers['Content-Type'],
                      })
-        # my_db_obj = DbManaged()
         data = {}
         print("hcduhc")
         data['tittle'] = form['tittle'].value
@@ -249,7 +244,6 @@ class registration:
         data['isArchive'] = form['isArchive'].value
         data['isTrash'] = form['isTrash'].value
         print(data)
-        # my = DbManaged()
         my_db_obj.query_insert(data)
         response_data = {'success': True, "data": [], "message": "Inserted Successfully"}
         Response(self).jsonResponse(status=404, data=response_data)
@@ -265,8 +259,6 @@ class registration:
             environ={'REQUEST_METHOD': 'POST',
                      'CONTENT_TYPE': self.headers['Content-Type'],
                      })
-        response_data = {'success': True, "data": [], "message": ""}
-        # my_db_obj = DbManaged()
         data = {}
         data['id'] = form['id'].value
         data['tittle'] = form['tittle'].value
@@ -286,11 +278,8 @@ class registration:
             environ={'REQUEST_METHOD': 'POST',
                      'CONTENT_TYPE': self.headers['Content-Type'],
                      })
-        # my_db_obj = DbManaged()
         data = {}
         data['id'] = form['id'].value
-        # data['tittle'] = form['tittle'].value
-        print(data)
         my_db_obj.query_delete(data)
         response_data = {'success': True, "data": [], "message": "Deleted Successfully"}
         Response(self).jsonResponse(status=404, data=response_data)
@@ -328,20 +317,11 @@ class registration:
         # my_db_obj = DbManaged()
         data = {}
         data['tablename'] = form['tablename'].value
-        print(data)
+        # print(data)
         my_db_obj.query_create(data)
         response_data = {'success': True, "data": [], "message": "created table Successfully"}
         Response(self).jsonResponse(status=404, data=response_data)
 
-    # def decode(self, token):
-    #     try:
-    #         jwt_decode = jwt.decode(token, JWT_SECRET, JWT_ALGORITHM)
-    #         data = jwt_decode['username']
-    #         # print(jwt_decode)
-    #         print(data)
-    #         return True
-    #     except jwt.DecodeError:
-    #         print("New user")
 
     def auth(self, catch):
         try:
@@ -377,12 +357,12 @@ class registration:
         # # obj = db_connection()
         # my_db_obj.queryExecute(sql, val)
         my_db_obj.update_profile(valid_image)
-        if check:
-            response_data = {'success': True, "data": [], "message": "Unsupported file extension"}
-            Response(self).jsonResponse(status=404, data=response_data)
-        else:
-            response_data = {'success': True, "data": [], "message": "Profile Updated Successfully"}
-            Response(self).jsonResponse(status=404, data=response_data)
+        # if check:
+        #     response_data = {'success': True, "data": [], "message": "Unsupported file extension"}
+        #     Response(self).jsonResponse(status=404, data=response_data)
+        # else:
+        response_data = {'success': True, "data": [], "message": "Profile Updated Successfully"}
+        Response(self).jsonResponse(status=404, data=response_data)
 
     def list(self):
         catch = my_db_obj.list_notes()
