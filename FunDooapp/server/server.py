@@ -117,7 +117,7 @@ class S(BaseHTTPRequestHandler):
             obj = registration
             print(self.headers['token'])
             catch = self.headers['token']
-            flag = obj.auth(self, catch)
+            flag = obj. auth(self, catch)
             if flag:
                 obj = registration
                 obj.insert(self)
