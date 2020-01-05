@@ -71,12 +71,12 @@ class S(BaseHTTPRequestHandler):
         elif self.path == '/listing':
             obj = registration
             catch, respon, res = obj.list(self)
-            response_data = {'success': True, "data": [], "message": "This is listing Of isPinned{}".format(catch)}
+            response_data = {'success': True, "data": [], "message": "This is listing Of isPinned{}{}{}".format(catch, respon, res)}
             Response(self).jsonResponse(status=404, data=response_data)
-            response_data = {'success': True, "data": [], "message": "This is listing Of isTrash{}".format(respon)}
-            Response(self).jsonResponse(status=404, data=response_data)
-            response_data = {'success': True, "data": [], "message": "This is listing Of isArchive{}".format(res)}
-            Response(self).jsonResponse(status=404, data=response_data)
+            # response_data = {'success': True, "data": [], "message": "This is listing Of isTrash{}".format(respon)}
+            # Response(self).jsonResponse(status=404, data=response_data)
+            # response_data = {'success': True, "data": [], "message": "This is listing Of isArchive{}".format(res)}
+            # Response(self).jsonResponse(status=404, data=response_data)
 
         else:
             # response_data = {'success': False, "data": [], "message": "URL Invalid"}
@@ -117,7 +117,7 @@ class S(BaseHTTPRequestHandler):
             obj = registration
             print(self.headers['token'])
             catch = self.headers['token']
-            flag = obj. auth(self, catch)
+            flag = obj.auth(self, catch)
             if flag:
                 obj = registration
                 obj.insert(self)
@@ -130,6 +130,11 @@ class S(BaseHTTPRequestHandler):
             obj.create(self)
 
         elif self.path == '/profile':
+            # self.send_response(200)
+            # self.send_header("Content-type", "image/jpg")
+            # self.send_header("Content-length", 20)
+            # self.end_headers()
+            # print(self.send_header)
             obj = registration
             obj.updateProfile(self)
 
@@ -141,7 +146,7 @@ class S(BaseHTTPRequestHandler):
     def do_PUT(self):
         if self.path == '/update':
             obj = registration
-            print(self.headers['token'])
+            # print(self.headers['token'])
             catch = self.headers['token']
             flag = obj.auth(self, catch)
             if flag:

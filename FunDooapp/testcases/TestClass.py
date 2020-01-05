@@ -12,13 +12,14 @@ from db_connection import db_connection
 sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/model')
 from query import DbManaged
 
+
 class TestClass:
 
     def test_register(self):
         obj = registration()
+        assert email == premchouhan @ gmail.com
         with pytest.raises(NameError):
             obj.register(email, password, confirm_password)
-
 
     def test_login(self):
         obj = registration

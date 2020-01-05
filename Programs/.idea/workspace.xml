@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3485e27d-80c0-4995-9e64-fe5d0465fdf5" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/objectorientedprograms/com/bridgelabz/addressbook/addressbook.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FunDooapp/model/query.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/model/query.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FunDooapp/view/registration.py" beforeDir="false" afterPath="$PROJECT_DIR$/../FunDooapp/view/registration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/datastructure/Utility.py" beforeDir="false" afterPath="$PROJECT_DIR$/datastructure/Utility.py" afterDir="false" />
@@ -238,14 +239,14 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.dequeue" />
-      <item itemvalue="Python.orderedlist" />
-      <item itemvalue="Python.queue" />
-      <item itemvalue="Python.addresspattren" />
-      <item itemvalue="Python.demo (1)" />
-      <item itemvalue="Python.practice" />
       <item itemvalue="Python.StockAccount" />
       <item itemvalue="Python.TestClass" />
+      <item itemvalue="Python.addresspattren" />
+      <item itemvalue="Python.demo (1)" />
+      <item itemvalue="Python.dequeue" />
+      <item itemvalue="Python.orderedlist" />
+      <item itemvalue="Python.practice" />
+      <item itemvalue="Python.queue" />
     </list>
     <recent_temporary>
       <list>
@@ -300,10 +301,10 @@
       <screen x="67" y="27" width="1213" height="997" />
     </state>
     <state x="368" y="329" width="569" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1213.997@67.27.1213.997" timestamp="1575875621305" />
-    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl" timestamp="1577943861637">
+    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl" timestamp="1578025341975">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.997@67.27.1213.997" timestamp="1577943861637" />
+    <state x="456" y="282" width="424" height="484" key="FileChooserDialogImpl/67.27.1213.997@67.27.1213.997" timestamp="1578025341975" />
     <state width="1190" height="199" key="GridCell.Tab.0.bottom" timestamp="1576679725844">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
@@ -340,10 +341,10 @@
       <screen x="67" y="27" width="1213" height="997" />
     </state>
     <state width="606" height="499" key="XDebugger.FullValuePopup/67.27.1213.997@67.27.1213.997" timestamp="1575433038774" />
-    <state x="329" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1577943574630">
+    <state x="329" y="352" key="com.intellij.ide.util.TipDialog" timestamp="1578025334820">
       <screen x="67" y="27" width="1213" height="997" />
     </state>
-    <state x="329" y="352" key="com.intellij.ide.util.TipDialog/67.27.1213.997@67.27.1213.997" timestamp="1577943574630" />
+    <state x="329" y="352" key="com.intellij.ide.util.TipDialog/67.27.1213.997@67.27.1213.997" timestamp="1578025334820" />
     <state x="441" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1576039815233">
       <screen x="67" y="27" width="1213" height="997" />
     </state>

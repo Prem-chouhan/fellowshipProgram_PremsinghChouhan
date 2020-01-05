@@ -51,7 +51,7 @@ class DbManaged:
 
     def username_exists(self, data):
         """Select Query is fired Here and username is present or not is shown """
-        print(data)
+        # print(data)
         sql = "SELECT username FROM Login where username = '" + data['username'] + "'"
         # self.mycursor.execute(sql)
         my_result = my_db_obj.queryfetch(sql)
@@ -193,17 +193,18 @@ class DbManaged:
         key where to delete:param data:
         no:return:
         """
-        hj = str(data)
-        sql = "UPDATE Picture SET path = '" + data + "' WHERE id = '1' "
+        # hj = str(data)
+        sql = "UPDATE Picture SET path = '" + data['path'] + "' WHERE id = '"+data['id']+"' "
         my_db_obj.query(sql)
 
     def validate_file_extension(self, data):
         import os
-        print(data)
-        ext = os.path.splitext(data)[1]  # [0] returns path+filename
+        # print(data["path"])
+        ext = os.path.splitext(data['path'])[1]  # [0] returns path+filename
         valid_extensions = ['.jpg']
         if not ext.lower() in valid_extensions:
             print("Unsupported file extension.")
+        else:
             return True
             # raise ValidationError(u'Unsupported file extension.')
 
@@ -228,7 +229,9 @@ class DbManaged:
     #     return catch
 
     def validate_file_size(self, data):
-        filesize = data
+
+        filesize = len(data['path'])
+        # print(filesize)
         if filesize > 10485760:
             print("The maximum file size that can be uploaded is 10MB")
         else:

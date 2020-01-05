@@ -1,16 +1,18 @@
-import cgi
-import sys
-import os
-from email.mime.multipart import MIMEMultipart
-import smtplib
-import base64
+import os, \
+    sys,\
+    jwt, \
+    cgi, \
+    smtplib, \
+    base64
 
-import jwt
+from email.mime.multipart import MIMEMultipart
 from datetime import datetime, timedelta
 
-sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/model')
+# from ..model.query import DbManaged
 
-sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/view')
+#sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/model')
+#sys.path.insert(0, '/home/admin-1/PycharmProjects/FunDooapp/view')
+
 from query import DbManaged
 from response import Response
 import pdb
@@ -59,7 +61,6 @@ class registration:
             else:
                 response_data.update({"message": "Email Already Exists", "success": False})
                 Response(self).jsonResponse(status=202, data=response_data)
-
 
     def login(self):
         """
@@ -135,8 +136,6 @@ class registration:
             response_data.update({"success": True, "message": "Successfully sent mail"})
             Response(self).jsonResponse(status=202, data=response_data)
 
-
-
     def store(self, key):
         """
         here password will be updated and response will be show password updated
@@ -193,7 +192,7 @@ class registration:
         data = {}
         data['id'] = form['id'].value
         data['tittle'] = form['tittle'].value
-        print(data)
+        # print(data)
         my_db_obj.query_update(data)
         response_data = {'success': True, "data": [], "message": "Updated Successfully"}
         Response(self).jsonResponse(status=404, data=response_data)
@@ -252,12 +251,19 @@ class registration:
         response_data = {'success': True, "data": [], "message": "created table Successfully"}
         Response(self).jsonResponse(status=404, data=response_data)
 
-
     def auth(self, catch):
+        """
+        this function is used to decode and check whether the user is authorized user or not
+        :param catch:
+        True:return:
+        """
         try:
+            print("chdshc")
             jwt_decode = jwt.decode(catch, JWT_SECRET, JWT_ALGORITHM)
             data = jwt_decode['username']
+            # print(jwt_decode,"jndcjnjc")
             success = my_db_obj.username_exists(data)
+            # print(success)
             return success
         except jwt.ExpiredSignatureError:
             return 'Signature expired. Please log in again.'
@@ -274,25 +280,27 @@ class registration:
                      'CONTENT_TYPE': self.headers['Content-Type'],
                      })
         data = {}
-        pdb.set_trace()
+        # pdb.set_trace()
         data['path'] = form['path'].value
         data['id'] = form['id'].value
-        image = base64.b64encode(data['path'])
-        valid_image = image.decode("utf-8")
-        # flag = my_db_obj.validate_file_extension(valid_image)
-        # check = my_db_obj.validate_file_size(valid_image)
+        # image = base64.b64encode(data['path'])
+        # valid_image = image.decode("utf-8")
+        flag = my_db_obj.validate_file_extension(data)
+        check = my_db_obj.validate_file_size(data)
         # valid_image = image.decode("utf-8")
         # sql = "INSERT INTO Picture(path) VALUES (%s)"
         # val = (data['path'])
         # # obj = db_connection()
         # my_db_obj.queryExecute(sql, val)
-        my_db_obj.update_profile(valid_image)
-        # if check:
-        #     response_data = {'success': True, "data": [], "message": "Unsupported file extension"}
-        #     Response(self).jsonResponse(status=404, data=response_data)
-        # else:
-        response_data = {'success': True, "data": [], "message": "Profile Updated Successfully"}
-        Response(self).jsonResponse(status=404, data=response_data)
+        my_db_obj.update_profile(data)
+        # print(flag)
+        # print(check)
+        if flag and check:
+            response_data = {'success': True, "data": [], "message": "Profile Updated Successfully"}
+            Response(self).jsonResponse(status=404, data=response_data)
+        else:
+            response_data = {'success': True, "data": [], "message": "Unsupported file extension"}
+            Response(self).jsonResponse(status=404, data=response_data)
 
     def list(self):
         catch = my_db_obj.list_notes()
